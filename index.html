@@ -4,9 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Meta Tags -->
     <title>Hemal Shah - AI Engineer & Python Developer</title>
     <meta name="description"
         content="Portfolio of Hemal Shah, AI Engineer specializing in Python, Machine Learning, and Automation. Explore my projects in AI, web development, and workflow automation.">
+    <meta name="keywords"
+        content="AI Engineer, Python Developer, Machine Learning, Automation, Full Stack Developer, Hemal Shah">
+    <meta name="author" content="Hemal Shah">
+    <link rel="canonical" href="https://hemal9102.github.io/portfolio_HK/">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Hemal Shah - AI Engineer & Python Developer">
+    <meta property="og:description" content="Explore my projects in AI, web development, and workflow automation.">
+    <meta property="og:image" content="https://hemal9102.github.io/portfolio_HK/resources/supabase-logo-icon.png">
+    <meta property="og:url" content="https://hemal9102.github.io/portfolio_HK/">
+
+    <!-- Security: Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' https: 'unsafe-inline' 'unsafe-eval'; img-src 'self' https: data:; font-src 'self' https: data:;">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -19,273 +35,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
 
     <!-- Custom Styles -->
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
-        :root {
-            --primary-blue: #1e40af;
-            --accent-blue: #ffffff;
-            --text-dark: #374151;
-            --bg-light: #f9fafb;
-        }
-
-        * {
-            font-family: 'Inter', sans-serif;
-        }
-
-        body {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            overflow-x: hidden;
-        }
-
-        .hero-bg {
-            background: linear-gradient(135deg, #0F172A, rgba(118, 75, 162, 0.9) 100%);
-            position: relative;
-        }
-
-        .glass-nav {
-            backdrop-filter: blur(10px);
-            background: rgba(255, 255, 255, 0.1);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .gradient-text {
-            background: linear-gradient(45deg, #00378f, #4c00ff, #ffffff);
-            background-size: 300% 300%;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: gradientShift 3s ease-in-out infinite;
-        }
-
-        @keyframes gradientShift {
-
-            0%,
-            100% {
-                background-position: 0% 50%;
-            }
-
-            50% {
-                background-position: 100% 50%;
-            }
-        }
-
-        .hover-lift {
-            transition: all 0.3s ease;
-        }
-
-        .hover-lift:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        }
-
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-        }
-
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-            transition: all 0.6s ease;
-        }
-
-        .particle-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-        }
-
-        .content-overlay {
-            position: relative;
-            z-index: 10;
-        }
-
-        .dark-mode {
-            background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
-            color: #f9fafb;
-        }
-
-        .dark-mode .glass-nav {
-            background: rgba(31, 41, 55, 0.8);
-            border-bottom: 1px solid rgba(75, 85, 99, 0.3);
-        }
-
-        .typewriter-cursor {
-            animation: blink 1s infinite;
-        }
-
-        @keyframes blink {
-
-            0%,
-            50% {
-                opacity: 1;
-            }
-
-            51%,
-            100% {
-                opacity: 0;
-            }
-        }
-
-        .skill-bar {
-            height: 8px;
-            background: rgba(59, 130, 246, 0.2);
-            border-radius: 4px;
-            overflow: hidden;
-        }
-
-        .skill-fill {
-            height: 100%;
-            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
-            border-radius: 4px;
-            width: 0%;
-            transition: width 2s ease-in-out;
-        }
-
-        /* Compact static floating right-side bar */
-        .right-sidebar {
-            position: fixed;
-            right: 16px;
-            top: 50%;
-            transform: translateY(-50%);
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            z-index: 90;
-            pointer-events: auto;
-            align-items: center;
-        }
-
-        /* individual compact item */
-        .right-sidebar .side-item {
-            width: 40px;
-            height: 40px;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(6px);
-            box-shadow: 0 6px 18px rgba(2, 6, 23, 0.12);
-            transition: transform .18s ease, background .18s ease, box-shadow .18s ease;
-            overflow: visible;
-        }
-
-        .right-sidebar .side-item a,
-        .right-sidebar .side-item button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            height: 100%;
-            color: #e6edf3;
-            text-decoration: none;
-            background: transparent;
-            border: 0;
-            padding: 0;
-            cursor: pointer;
-        }
-
-        .right-sidebar .side-item:hover {
-            transform: translateX(-6px) scale(1.03);
-            background: linear-gradient(135deg, rgba(59, 130, 246, 0.08), rgba(139, 92, 246, 0.06));
-            box-shadow: 0 10px 28px rgba(2, 6, 23, 0.22);
-        }
-
-        .right-sidebar .divider {
-            width: 1px;
-            height: 14px;
-            background: rgba(255, 255, 255, 0.06);
-            margin: 6px 0;
-        }
-
-        /* small page padding so content not hidden on the right */
-        .content-with-sidebar {
-            transition: padding 0.2s;
-        }
-
-        @media (max-width: 767px) {
-            .right-sidebar {
-                display: none;
-            }
-
-            .content-with-sidebar {
-                padding-right: 0;
-            }
-        }
-
-        @keyframes pulse {
-            0% {
-                box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4);
-            }
-
-            70% {
-                box-shadow: 0 0 0 10px rgba(59, 130, 246, 0);
-            }
-
-            100% {
-                box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
-            }
-        }
-
-        /* Floating animation for profile image */
-        @keyframes float {
-            0% {
-                transform: translateY(0px);
-            }
-
-            50% {
-                transform: translateY(-10px);
-            }
-
-            100% {
-                transform: translateY(0px);
-            }
-        }
-
-        .floating-profile {
-            animation: float 3s ease-in-out infinite;
-        }
-
-        /* Smooth breathing animation for the whole container */
-        @keyframes breathe {
-            0% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(1.2);
-            }
-
-            100% {
-                transform: scale(1);
-            }
-        }
-
-        /* Icon hover animation */
-        .icon-anim {
-            transition: transform 0.25s ease, filter 0.25s ease;
-        }
-
-        .icon-anim:hover {
-            transform: scale(1.25) rotate(6deg);
-            filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.2));
-        }
-
-        /* Sidebar hover pop effect */
-        .sidebar-anim {
-            transition: transform .3s ease;
-        }
-
-        .sidebar-anim:hover {
-            transform: scale(1.05);
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body class="transition-colors duration-300">
@@ -299,17 +49,6 @@
             <!-- Standard Button Class for ALL icons -->
             <!-- width: 40px , height: 40px -->
             <!-- perfectly circular, centered, consistent -->
-
-            <style>
-                .nav-btn {
-                    width: 40px;
-                    height: 40px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    border-radius: 50%;
-                }
-            </style>
 
             <!-- Home -->
             <div class="nav-btn icon-anim">
@@ -381,7 +120,7 @@
                     <!-- Left Content -->
                     <div class="text-center lg:text-left">
                         <h1 class="text-5xl lg:text-7xl font-bold text-white mb-6 reveal">
-                             <span class="gradient-text">Hemal Shah</span>
+                            <span class="gradient-text">Hemal Shah</span>
                         </h1>
 
                         <div class="text-xl lg:text-2xl text-blue-100 mb-8 reveal">
@@ -434,59 +173,72 @@
                                 GitHub
                             </a>
                         </div>-->
-                    </div> 
+                    </div>
 
                     <!-- Right Content - Hero Image -->
 
                     <!-- // ...existing code... -->
                     <div class="reveal">
                         <div class="relative">
-                                                   <div class="grid grid-cols-2 gap-4 w-fit mx-auto lg:mx-0 reveal">
-                            <a href="resources/hk_cv.pdf"
-                                class="hover-lift bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold flex items-center justify-center gap-2">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
-                                    </path>
-                                </svg>
-                                Download Resume
-                            </a>
+                            <<<<<<< HEAD <div class="grid grid-cols-2 gap-4 w-fit mx-auto lg:mx-0 reveal">
+                                <a href="resources/hk_cv.pdf"
+                                    class="hover-lift bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold flex items-center justify-center gap-2">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                                        </path>
+                                    </svg>
+                                    Download Resume
+                                </a>
+                                =======
+                                <div class="grid grid-cols-2 gap-4 w-fit mx-auto lg:mx-0 reveal">
+                                    <a href="resources/Resume.pdf"
+                                        class="hover-lift bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold flex items-center justify-center gap-2">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                                            </path>
+                                        </svg>
+                                        Download Resume
+                                    </a>
+                                    >>>>>>> a230666 (change structure added SEO)
 
-                            <a href="https://www.linkedin.com/in/hemal-shah-49a728362/" target="_blank"
-                                class="hover-lift border-2 border-white text-white px-8 py-4 rounded-lg font-semibold flex items-center justify-center gap-2">
-                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                    <path
-                                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z">
-                                    </path>
-                                </svg>
-                                LinkedIn
-                            </a>
+                                    <a href="https://www.linkedin.com/in/hemal-shah-49a728362/" target="_blank"
+                                        class="hover-lift border-2 border-white text-white px-8 py-4 rounded-lg font-semibold flex items-center justify-center gap-2">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                            <path
+                                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z">
+                                            </path>
+                                        </svg>
+                                        LinkedIn
+                                    </a>
 
-                            <a href="resources/CV.pdf" target="_blank"
-                                class="hover-lift border-2 border-white text-white px-8 py-4 rounded-lg font-semibold flex items-center justify-center gap-2">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M12 3v12m0 0l-3-3m3 3l3-3M21 21H3"></path>
-                                </svg>
-                                Download CV
-                            </a>
+                                    <a href="resources/hk_cv.pdf" target="_blank"
+                                        class="hover-lift border-2 border-white text-white px-8 py-4 rounded-lg font-semibold flex items-center justify-center gap-2">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M12 3v12m0 0l-3-3m3 3l3-3M21 21H3"></path>
+                                        </svg>
+                                        Download CV
+                                    </a>
 
-                            <a href="https://github.com/hemal9102" target="_blank"
-                                class="hover-lift border-2 border-white text-white px-8 py-4 rounded-lg font-semibold flex items-center justify-center gap-2">
-                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                    <path
-                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 10.92.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
-                                    </path>
-                                </svg>
-                                GitHub
-                            </a>
-                        </div>
- 
-                            <!-- <img src="resources/photo1.png" height="100" width="400" alt="Hemal Shah - AI Engineer"
+                                    <a href="https://github.com/hemal9102" target="_blank"
+                                        class="hover-lift border-2 border-white text-white px-8 py-4 rounded-lg font-semibold flex items-center justify-center gap-2">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                            <path
+                                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 10.92.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
+                                            </path>
+                                        </svg>
+                                        GitHub
+                                    </a>
+                                </div>
+
+                                <!-- <img src="resources/photo1.png" height="100" width="400" alt="Hemal Shah - AI Engineer"
                                 class="w-full max-w-md mx-auto rounded-2xl shadow-2xl hover-lift">
-                        --><div
-                                class="absolute -inset-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl opacity-20 blur-xl">
-                            </div>
+                        -->
+                                <div
+                                    class="absolute -inset-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl opacity-20 blur-xl">
+                                </div>
                         </div>
                     </div>
                 </div>
@@ -806,105 +558,8 @@
         </footer>
 
         <!-- JavaScript -->
-        <script>
-            // Initialize Typed.js
-            document.addEventListener('DOMContentLoaded', function () {
-                new Typed('#typed-text', {
-                    strings: [
-                        'Automation Engineer',
-                        'Full Stack Developer',
-                        'Problem Solver'
-                    ],
-                    typeSpeed: 60,
-                    backSpeed: 40,
-                    loop: true
-                });
-
-                // Reveal animations on scroll
-                const revealElements = document.querySelectorAll('.reveal');
-
-                const revealOnScroll = function () {
-                    revealElements.forEach(element => {
-                        const elementTop = element.getBoundingClientRect().top;
-                        const elementVisible = 150;
-
-                        if (elementTop < window.innerHeight - elementVisible) {
-                            element.classList.add('active');
-                        }
-                    });
-                };
-
-                window.addEventListener('scroll', revealOnScroll);
-                revealOnScroll(); // Initial check
-
-                // Skill bar animation
-                const skillBars = document.querySelectorAll('.skill-fill');
-                skillBars.forEach(bar => {
-                    const width = bar.getAttribute('data-width');
-                    bar.style.width = width;
-                });
-
-                // Dark mode toggle
-                const darkModeToggle = document.getElementById('darkModeToggle');
-                darkModeToggle.addEventListener('click', function () {
-                    document.body.classList.toggle('dark-mode');
-                });
-
-                // Smooth scrolling for navigation links
-                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                    anchor.addEventListener('click', function (e) {
-                        e.preventDefault();
-                        const target = document.querySelector(this.getAttribute('href'));
-                        if (target) {
-                            window.scrollTo({
-                                top: target.offsetTop - 80,
-                                behavior: 'smooth'
-                            });
-                        }
-                    });
-                });
-
-                // Particle animation background
-                function createParticles() {
-                    const container = document.getElementById('particleContainer');
-                    if (!container) return;
-
-                    // Clear existing particles
-                    container.innerHTML = '';
-
-                    // Create new particles
-                    for (let i = 0; i < 30; i++) {
-                        const particle = document.createElement('div');
-                        particle.style.position = 'absolute';
-                        particle.style.width = `${Math.random() * 10 + 2}px`;
-                        particle.style.height = particle.style.width;
-                        particle.style.background = `rgba(255, 255, 255, ${Math.random() * 0.5})`;
-                        particle.style.borderRadius = '50%';
-                        particle.style.left = `${Math.random() * 100}%`;
-                        particle.style.top = `${Math.random() * 100}%`;
-                        particle.style.animation = `float ${Math.random() * 10 + 10}s infinite ease-in-out`;
-                        particle.style.animationDelay = `${Math.random() * 5}s`;
-
-                        // Add CSS for animation
-                        const style = document.createElement('style');
-                        style.textContent = `
-                            @keyframes float {
-                                0% { transform: translate(0, 0); }
-                                25% { transform: translate(${Math.random() * 100 - 50}px, ${Math.random() * 100 - 50}px); }
-                                50% { transform: translate(${Math.random() * 100 - 50}px, ${Math.random() * 100 - 50}px); }
-                                75% { transform: translate(${Math.random() * 100 - 50}px, ${Math.random() * 100 - 50}px); }
-                                100% { transform: translate(0, 0); }
-                            }
-                        `;
-                        document.head.appendChild(style);
-
-                        container.appendChild(particle);
-                    }
-                }
-
-                createParticles();
-            });
-        </script>
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/index_animations.js"></script>
     </div> <!-- /.content-with-sidebar -->
 </body>
 

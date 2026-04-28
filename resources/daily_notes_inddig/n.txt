@@ -1,0 +1,30 @@
+13/3/26
+Hemal Shah
+
+- Implement client-side location permission request.
+- Identify and store doctor's timezone via user settings.
+- Automate scheduling to match doctor/patient time zones.
+- Send emails using local recipient time zone logic.
+- Update UI calendar to reflect new timezone data.
+- Validate timezone changes and update in real-time.
+
+14/3/26
+Hemal Shah
+
+- Configure the project Dockerfile and environment setup.
+- Initialize the Docker image and container for the project.
+- Complete the installation and deployment of the Docker engine.
+- Enable hardware virtualization via BIOS settings for Docker compatibility.
+- Implement the Edit and Delete functional components in the frontend and backend.
+- Engineer backend logic for patient event deletion and date-specific updates.
+
+16-03-2026
+Hemal Shah
+
+- Brain Storming about project architecture upgradation
+- Architect the backend application into modular, maintainable components (main.py, database.py, auth.py)
+- Engineer a multi-tenant system to support independent doctor registration and dynamic patient booking workflows
+- Implement JWT-based authentication and secure backend endpoints with token-based route protection
+- Resolve database relational mapping to successfully link patient appointments to specific doctor profiles
+- Troubleshoot and resolve backend dependency conflicts between passlib and bcrypt for secure password hashing
+- Configure server connection protocols, CORS policies, and Swagger UI authorization mechanisms for API testing
