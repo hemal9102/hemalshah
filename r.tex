@@ -1,0 +1,182 @@
+%==============================================================
+%  HEMAL SHAH - AI / GENAI DEVELOPER RESUME
+%  Paste this whole file into a new Overleaf project (main.tex)
+%  Compiler: pdfLaTeX  (Overleaf default)
+%
+%  HONESTY NOTE (delete before exporting):
+%  - "Core Skills" = things actually on your CV / built by you.
+%  - "Currently Strengthening" = market-demanded skills you do
+%    NOT yet have. Keep them ONLY while genuinely learning them.
+%    Move a line up to Core Skills once you've shipped something
+%    with it. Do not claim them as known in interviews.
+%==============================================================
+\documentclass[a4paper,8pt]{extarticle}
+
+\usepackage[top=0.4in,bottom=0.35in,left=0.45in,right=0.45in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage[T1]{fontenc}
+
+\definecolor{primary}{HTML}{1A1A1A}
+\definecolor{accent}{HTML}{2C5F8A}
+
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% --- Section styling -----------------------------------------
+\titleformat{\section}
+  {\large\bfseries\color{accent}}
+  {}{0em}{}[\color{accent}\titlerule]
+\titlespacing{\section}{0pt}{3pt}{2pt}
+
+\setlist[itemize]{leftmargin=1.2em, itemsep=0pt, topsep=1pt, parsep=0pt}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\linespread{0.97}
+
+% --- Helper for experience headings -------------------------
+\newcommand{\expitem}[4]{%
+  \textbf{#1} \hfill \textbf{#3}\\
+  \textit{#2} \hfill \textit{#4}\\
+}
+
+\begin{document}
+
+%==============================================================
+% HEADER
+%==============================================================
+\begin{center}
+  {\Huge \bfseries \color{primary} Hemal Shah}\\[4pt]
+  {\large \color{accent} AI / GenAI Developer}\\[6pt]
+  \small
+  \href{mailto:22bt04134@gsfcuniversity.ac.in}{22bt04134@gsfcuniversity.ac.in} \quad
+  +91-8320278775\\
+  Bharuch, Gujarat, India \quad
+  \href{https://github.com/hemal9102}{github.com/hemal9102} \quad
+  \href{https://hemal9102.github.io/portfolio_HK/}{Portfolio}
+\end{center}
+
+%==============================================================
+% SUMMARY
+%==============================================================
+\section{Professional Summary}
+Final-year Computer Science engineer specializing in \textbf{AI application development},
+\textbf{Retrieval-Augmented Generation (RAG)} systems, and \textbf{backend automation}.
+Built and deployed a production GraphRAG platform and multiple LLM-integrated automation
+tools across three internships. Strong in Python, FastAPI, and Docker, with hands-on
+experience integrating LLM APIs into real-world products.
+
+%==============================================================
+% SKILLS
+%==============================================================
+\section{Technical Skills}
+\textbf{AI / GenAI:} Retrieval-Augmented Generation (RAG), GraphRAG, Vector Search,
+Embeddings (Sentence-Transformers), LLM API Integration (Groq), Prompt Engineering,
+OCR, NLP-based Document Processing\\
+\textbf{Backend \& APIs:} Python, FastAPI, REST API Development, JWT Authentication,
+Multi-Auth, OAuth 2.0\\
+\textbf{Data \& Storage:} PostgreSQL, pgvector, MongoDB, Supabase, Power BI\\
+\textbf{DevOps \& Tools:} Docker, Docker Compose, Git, GitHub, CI/CD, Render, Railway,
+Linux, n8n (Workflow Automation), FastMCP\\
+\textbf{Languages:} Python, JavaScript, C, C++, C\#\\
+\textbf{Currently Strengthening:} LangChain, LangGraph, LlamaIndex, Pinecone / ChromaDB,
+LLM Fine-tuning, PyTorch
+% ^ Keep this line ONLY while genuinely learning these. Move items
+%   up to the relevant category once you have shipped a project.
+
+%==============================================================
+% EXPERIENCE
+%==============================================================
+\section{Professional Experience}
+
+\expitem{AI / Automation Developer}{Inddig Media Pvt. Ltd.}{Mar 2026 -- Present}{}
+\begin{itemize}
+  \item Built and deployed an AI-driven medical appointment system using FastAPI and
+        the Google Calendar API, enabling automated scheduling and patient management
+        for a healthcare client; completed Google Cloud OAuth verification.
+  \item Rebuilt a legacy PHP-based Google Review workflow using n8n automation and
+        Claude MCP servers, reducing manual processing for 400+ client profiles.
+  \item Developed and launched responsive full-stack websites (HTML/CSS/JS/PHP) for
+        local businesses, managing hosting, SSL, and SEO-friendly site structure.
+\end{itemize}
+
+\expitem{AI Engineer Intern}{SentimentAI}{Jul 2025}{}
+\begin{itemize}
+  \item Built an invoice automation system using PDF parsers and OCR to extract
+        structured fields (items, prices, totals) from scanned and digital invoices.
+  \item Developed a Telegram bot integrated with n8n for conversational document
+        Q\&A and file analysis on uploaded PDFs and images.
+  \item Created Google Maps and LinkedIn scrapers for lead generation and market
+        research, plus an OCR-based PDF text scanner for data-entry automation.
+  \item Worked with Python, BeautifulSoup, Puppeteer, the OCR.space API, and n8n
+        for scraping, OCR, and API-driven workflow automation.
+\end{itemize}
+
+\expitem{AI / Data Science Intern}{Techicom}{Jun 2025 -- Jul 2025}{}
+\begin{itemize}
+  \item Built a daily sales-prediction model for local vendors to forecast demand and
+        optimize inventory; owned the full data pipeline (EDA, preprocessing, feature
+        engineering, modeling).
+  \item Built an interactive Power BI dashboard visualizing sales trends and demand
+        predictions for stakeholders.
+\end{itemize}
+
+\expitem{Web Development Intern}{SP Graphics}{Dec 2023 -- Jan 2024}{}
+\begin{itemize}
+  \item Built a responsive WordPress website (theme customization, Elementor, plugin integration, basic SEO).
+\end{itemize}
+
+%==============================================================
+% PROJECTS  (strongest first)
+%==============================================================
+\section{Key Projects}
+
+\textbf{TrendGraphAI} --- Research Intelligence Platform \hfill \textit{Jan 2026 -- Apr 2026}\\
+\href{https://github.com/hemal9102/trendgraphAI}{github.com/hemal9102/trendgraphAI}
+\textit{\quad Python, FastAPI, GraphRAG, PostgreSQL, pgvector, Groq API, Sentence-Transformers, Docker}
+\begin{itemize}
+  \item Built a production RAG pipeline: document ingestion $\rightarrow$ chunking
+        $\rightarrow$ embedding generation $\rightarrow$ vector retrieval over a
+        pgvector store.
+  \item Implemented semantic vector search and automated arXiv data extraction for
+        research-paper intelligence; containerized with Docker Compose. Major project (team of 4).
+\end{itemize}
+
+\textbf{GitLite} --- GitHub-Style Web Application \hfill \textit{Dec 2025}\\
+\href{https://hemal9102.github.io/GitLite/}{hemal9102.github.io/GitLite}
+\textit{\quad FastAPI, Docker, JWT, Render}
+\begin{itemize}
+  \item Built a GitHub-style application with FastAPI and JWT authentication;
+        containerized with Docker and deployed on Render.
+\end{itemize}
+
+\textbf{Telegram AI Bot} --- Conversational Document Assistant\\
+\href{https://t.me/Humong_bot}{t.me/Humong\_bot}
+\textit{\quad n8n, LLM API, OCR, HTTP Integration}
+\begin{itemize}
+  \item Built a Telegram bot that extracts text from PDFs/images and returns
+        AI-generated responses via an integrated LLM API and automated workflow.
+\end{itemize}
+
+\textbf{Chess AI} --- Reinforcement Learning Game \hfill \textit{Apr 2025 -- May 2025}\\
+\href{https://github.com/CYPbhai/Chess/}{github.com/CYPbhai/Chess}
+\textit{\quad Unity, C\#}
+\begin{itemize}
+  \item Developed a fully functional chess game in Unity with an AI opponent driven
+        by reinforcement learning (team of 4).
+\end{itemize}
+
+%==============================================================
+% EDUCATION
+%==============================================================
+\section{Education}
+\expitem{B.Tech., Computer Science \& Engineering}{GSFC University, Vadodara --- CGPA: 7.12 / 10}{2022 -- 2026}{}
+
+%==============================================================
+% TRAINING
+%==============================================================
+\section{Training \& Workshops}
+\textbf{International Conference ICON-AI-SMT'25} (GSFC University) --- AI in healthcare, cybersecurity \& business intelligence. \quad \textbf{Full-Stack Web Dev Training} (GSFC University) --- AI-assisted development, prompt engineering, API integration.
+
+\end{document}

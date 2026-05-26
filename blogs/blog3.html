@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Building My First AI Project – Blog | SpringSummer</title>
+  <meta name="description" content="Lessons learned from building my first serious AI project – Chess AI Engine with Python." />
+  <link rel="icon" href="../assets/favicon.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+  <header class="site-header">
+    <a href="../index.html" class="logo"><img src="../assets/favicon.png" alt="SpringSummer" class="logo-img" /></a>
+    <nav class="nav" id="main-nav">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../work.html">Work</a></li>
+        <li><a href="../services.html">Skills</a></li>
+        <li><a href="../blogs.html" class="active">Blog</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  </header>
+
+  <nav class="floating-dock" aria-label="Quick navigation">
+    <div class="dock-inner">
+      <a class="dock-btn" href="../index.html" title="Home"><span class="dock-tooltip">Home</span><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></a>
+      <a class="dock-btn" href="../blogs.html" title="Blog" style="color:#fff;background:rgba(59,130,246,0.15);"><span class="dock-tooltip">Blog</span><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20"/><path d="M4 3v16.5"/><path d="M8 3h12v18H8z"/></svg></a>
+      <div class="dock-divider"></div>
+      <a class="dock-btn" href="https://github.com/hemal9102" target="_blank" rel="noopener" title="GitHub"><span class="dock-tooltip">GitHub</span><svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.79-.26.79-.58v-2.23c-3.34.73-4.03-1.42-4.03-1.42-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.49 1 .11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.19.69.8.58A12 12 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg></a>
+      <a class="dock-btn" href="https://www.linkedin.com/in/hemal-shah-49a728362/" target="_blank" rel="noopener" title="LinkedIn"><span class="dock-tooltip">LinkedIn</span><svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zm1.78 13.02H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.73V1.73C24 .77 23.21 0 22.23 0z"/></svg></a>
+      <a class="dock-btn" href="https://www.instagram.com/hemal__shah_/" target="_blank" rel="noopener" title="Instagram"><span class="dock-tooltip">Instagram</span><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+      <a class="dock-btn" href="mailto:hemal.shah2004@gmail.com" title="Email"><span class="dock-tooltip">Email</span><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></a>
+    </div>
+  </nav>
+
+  <section class="section" style="padding-top:calc(var(--header-height) + 3rem);">
+    <div class="section-inner">
+      <a href="../blogs.html" class="blog-back reveal">← Back to Blog</a>
+      <div class="blog-post reveal">
+        <div class="blog-tags" style="margin-bottom:1rem;">
+          <span class="tag">AI</span><span class="tag green">Python</span><span class="tag purple">Learning</span>
+        </div>
+        <h1>Building My First AI Project – Lessons Learned</h1>
+        <p class="blog-meta">Published on May 20, 2025 · 7 min read</p>
+        <article>
+          <p>Every developer remembers their first real project — the one that pushed them past tutorials into the messy, beautiful reality of building something that actually works. For me, that was the Chess AI Engine.</p>
+          <h2>Why Chess?</h2>
+          <p>Chess is a perfect microcosm for AI thinking. It has clear rules, discrete states, and a well-defined win condition. Yet the game tree explodes exponentially — there are more possible chess positions than atoms in the observable universe. Building an AI to navigate that space taught me more about algorithm design than any textbook.</p>
+          <h2>The Minimax Algorithm</h2>
+          <p>I started with the classic minimax algorithm: recursively explore all possible moves, assume both players play optimally, and pick the move with the best outcome. Simple in theory. Slow in practice.</p>
+          <p>The first version was painfully slow — even at depth 3, it took several seconds per move. The game was unplayable.</p>
+          <h2>Alpha-Beta Pruning Changed Everything</h2>
+          <p>The breakthrough came with alpha-beta pruning. By tracking the best scores found for each player, we can skip entire branches of the game tree that can't possibly improve the result. Suddenly, the same depth that took 8 seconds took under 0.5 seconds.</p>
+          <blockquote>"Optimization isn't an afterthought — it's the difference between a toy and a tool."</blockquote>
+          <h2>Lessons I'll Never Forget</h2>
+          <p><strong>1. Profile before you optimize.</strong> I spent hours optimizing the wrong functions until I ran a profiler and discovered the real bottleneck.</p>
+          <p><strong>2. Test incrementally.</strong> Every new feature — move generation, check detection, castling — needs its own test before you build on top of it.</p>
+          <p><strong>3. The gap between working and good is huge.</strong> My first working version was a hack. Refactoring it taught me more than the original build.</p>
+          <p>This project is <a href="https://github.com/hemal9102/ChessAI-Glasses" target="_blank" rel="noopener" style="color:var(--color-blue);">on GitHub</a> if you want to explore the code.</p>
+        </article>
+        <hr class="divider" style="margin-top:3rem;" />
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;margin-top:1.5rem;">
+          <a href="blog2.html" class="card-link" style="color:var(--color-text-muted);">← Why I Chose Automation</a>
+          <a href="blog4.html" class="card-link">Next: n8n vs Python Scripts →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="../index.html" class="logo"><img src="../assets/favicon.png" alt="SpringSummer" class="logo-img" /></a>
+        <p>Automation Engineer · Python Developer · Full-stack Developer</p>
+      </div>
+      <nav class="footer-nav">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../work.html">Work</a></li>
+          <li><a href="../services.html">Skills</a></li>
+          <li><a href="../blogs.html">Blog</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="footer-social">
+        <h4>Connect</h4>
+        <div class="social-row">
+          <a class="social-btn" href="https://github.com/hemal9102" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.79-.26.79-.58v-2.23c-3.34.73-4.03-1.42-4.03-1.42-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.49 1 .11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.19.69.8.58A12 12 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a class="social-btn" href="https://www.linkedin.com/in/hemal-shah-49a728362/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zm1.78 13.02H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.73V1.73C24 .77 23.21 0 22.23 0z"/></svg>
+          </a>
+          <a class="social-btn" href="mailto:hemal.shah2004@gmail.com" aria-label="Email">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Hemal Shah · SpringSummer Portfolio. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>

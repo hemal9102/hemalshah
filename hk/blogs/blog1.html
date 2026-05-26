@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+            transition: all 0.7s ease;
+        }
+
+        /* Back Button Animation */
+        .back-btn {
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            transform: translateX(-4px);
+            color: #fff;
+        }
+
+        .back-arrow {
+            transition: transform 0.3s ease;
+        }
+
+        .back-btn:hover .back-arrow {
+            transform: translateX(-4px);
+        }
+
+        /* Card Glass Look */
+        .glass-box {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 28px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+
+<body class="p-6 max-w-3xl mx-auto">
+
+    <!-- Back Button -->
+    <a href="../blogs.html" class="back-btn text-gray-300 text-sm flex items-center gap-1 mb-8 hover:text-white">
+        <span class="back-arrow">←</span> Back to Blogs
+    </a>
+
+    <!-- BLOG WRAPPER -->
+    <div class="glass-box reveal">
+
+        <!-- Blog Title -->
+        <h1 class="text-4xl font-bold text-white mb-2">What Is a Life?</h1>
+        <p class="text-gray-200/80 text-sm mb-8">Published on October 25, 2025</p>
+
+        <!-- Blog Content -->
+        <article class="space-y-6 leading-relaxed text-gray-100">
+
+            <p>
+                What is our life, really? I ask myself this question so many times —
+                <em>What exactly is my life meant for?</em>
+                I stand at so many turning points hoping for an answer… but the answer never stands still long enough.
+            </p>
+
+            <p>
+                Till now, I’ve touched so many paths —
+                <strong>bodybuilding, art, craft, sketching, computers, grooming, reading, writing</strong> —
+                and I’m still exploring. I’m in the final year of my B.Tech. In the next few months, this chapter of my
+                life will end.
+            </p>
+
+            <p>
+                Earlier, I used to feel lost: I had no strong skills, no real experience, no emotional intelligence,
+                nothing to anchor me. But slowly, step by step, improvement arrived. A little discipline.
+                A little clarity. A little growth.
+            </p>
+
+            <h2 class="text-2xl font-semibold mt-10 text-white">Who Am I? Where Am I Going?</h2>
+
+            <p>
+                This question hits me every time I try to motivate myself. Am I the main character in my own story,
+                or just a background character in someone else’s world?
+            </p>
+
+            <p>
+                I look at my brother, who is my age and already contributing to his father’s business. That’s not a
+                small thing.
+                I look at my older brother who became a CA and is building stability for himself — and even for the next
+                generation.
+            </p>
+
+            <p>
+                From what I see, life is a delicate mixture of luck and hard work — both shaping us in ways we often
+                don’t understand. And whenever I think about this balance, Krishna’s words return to me like a quiet
+                reminder:
+            </p>
+
+            <blockquote class="border-l-4 border-white/30 pl-4 italic text-gray-200">
+                “Do your karma. Do not be attached to the result.”
+            </blockquote>
+
+            <p>
+                But what does that truly mean for me? Does it imply that my life is already shaped by the structure of
+                my karma,
+                written long before I was born? Or does it give me the freedom to rise above it?
+            </p>
+
+            <p>
+                Then another thought follows — Krishna’s declaration of his universal nature:
+            </p>
+
+            <blockquote class="border-l-4 border-white/30 pl-4 italic text-gray-200">
+                “I am the universe. I am destruction. I am the beginning and the end.
+                I am the stars, the earth, and the sky.”
+            </blockquote>
+
+            <p>
+                If Krishna embodies everything, then what am I in this vast design? What role do I play?
+            </p>
+
+            <p>
+                And just as this question forms, a deeper truth echoes:
+            </p>
+
+            <blockquote class="border-l-4 border-white/30 pl-4 italic text-gray-200">
+                “The soul is never born, and it never dies. The same energy that lives in a newborn child
+                exists in an old dying man.”
+            </blockquote>
+
+            <p>
+                If the soul remains forever unchanged and eternal, then what about the actions I take in this temporary
+                life?
+                Even if I achieve something remarkable, am I driven by pure intention — or by a hidden selfishness I
+                haven’t yet understood?
+            </p>
+
+            <p>
+                Does Arjun become the main character because of the purity of his soul, or simply because the story
+                needed him to be?
+                Does someone born in a small village automatically become a background character?
+            </p>
+
+            <p>
+                History remembers the ones who choose to rise — the ones who decide to become more than their
+                circumstances.
+                And maybe that is where the real difference lies.
+            </p>
+
+
+            <h2 class="text-2xl font-semibold mt-10 text-white">So… What Is Life?</h2>
+
+            <p>
+                Maybe life isn’t about finding an answer. Maybe it’s about living the questions with honesty,
+                courage, discipline, and awareness — until one day, the answer reveals itself.
+            </p>
+
+        </article>
+
+    </div>
+
+    <script>
+        // Reveal on scroll
+        const reveals = document.querySelectorAll(".reveal");
+        function revealCheck() {
+            reveals.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 50) {
+                    el.classList.add("active");
+                }
+            });
+        }
+        window.addEventListener("scroll", revealCheck);
+        window.onload = revealCheck;
+    </script>
+
+</body>
+
+</html>

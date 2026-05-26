@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Meta Tags -->
+    <title>Hemal Shah – Blog</title>
+    <meta name="description"
+        content="Read the latest blogs and articles by Hemal Shah on AI, automation, and full-stack development.">
+    <meta name="keywords" content="Blog, Hemal Shah, AI, Automation, Development">
+    <meta name="author" content="Hemal Shah">
+    <link rel="canonical" href="https://hemal9102.github.io/hemalshah/blogs.html">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Hemal Shah - Blog">
+    <meta property="og:description" content="Read the latest blogs and articles by Hemal Shah.">
+    <meta property="og:url" content="https://hemal9102.github.io/hemalshah/blogs.html">
+
+    <!-- Security: Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' https: 'unsafe-inline' 'unsafe-eval'; img-src 'self' https: data:; font-src 'self' https: data:;">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Core Libraries (same as homepage) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
+    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- Floating Sidebar (same as homepage) -->
+    <aside class="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50">
+
+        <div class="sidebar-anim flex flex-row items-center gap-3 p-3 rounded-full border bg-background
+        [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]
+        animate-[breathe_4s_ease-in-out_infinite]">
+
+            <!-- Standard Button Class for ALL icons -->
+            <!-- width: 40px , height: 40px -->
+            <!-- perfectly circular, centered, consistent -->
+
+            <!-- Home -->
+            <div class="nav-btn icon-anim">
+                <a href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="size-5" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                        <polyline points="9 22 9 12 15 12 15 22" />
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Blog -->
+            <div class="nav-btn icon-anim" title="Blog">
+                <a href="blogs.html">
+                    <svg width="24" height="24" stroke="currentColor" stroke-width="2">
+                        <path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20"></path>
+                        <path d="M4 3v16.5"></path>
+                        <path d="M8 3h12v18H8z"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Instagram -->
+            <div class="nav-btn icon-anim" title="Instagram">
+                <a href="https://www.instagram.com/hemall_9/" target="_blank">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5Zm4.25 3.25a5.25 5.25 0 1 1 0 10.5 5.25 5.25 0 0 1 0-10.5Zm0 1.5a3.75 3.75 0 1 0 0 7.5 3.75 3.75 0 0 0 0-7.5Zm5.75-.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Email -->
+            <div class="nav-btn icon-anim" title="Email">
+                <a href="mailto:hemal.shah2004@gmail.com">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="size-5">
+                        <path
+                            d="M12 13.065L0 6.064V19.2c0 .442.358.8.8.8H23.2c.442 0 .8-.358.8-.8V6.064l-12 7.001zM12 10.935l12-7.001V4.8c0-.442-.358-.8-.8-.8H.8C.358 4 0 4.358 0 4.8v.134l12 7.001z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- YouTube -->
+            <div class="nav-btn icon-anim" title="YouTube">
+                <a href="https://www.youtube.com/@HK_mixedits" target="_blank">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M23.5 6.2s-.2-1.7-.9-2.5a3.3 3.3 0 0 0-2.3-.9C17 2.5 12 2.5 12 2.5s-5 0-8.3.3a3.3 3.3 0 0 0-2.3.9C.7 4.5.5 6.2.5 6.2S0 8.2 0 10.2v1.6c0 2 .5 4 5.2 4.3 3.3.3 6.8.3 6.8.3s5 0 8.3-.3c2.3-.2 3.2-1.5 3.5-2.4.3-.9.5-2.5.5-2.5s.2-1.7.2-3.7V10c0-2-.2-3.8-.2-3.8z" />
+                        <polygon fill="#fff" points="9.5,8 15.5,12 9.5,16" />
+                    </svg>
+                </a>
+            </div>
+
+        </div>
+    </aside>
+
+
+    <!-- Blog Header -->
+    <section class="py-24 text-center text-white">
+        <h1 class="text-6xl font-bold reveal">My <span class="gradient-text">Blogs</span></h1>
+    </section>
+
+    <!-- Blog List Section -->
+    <section class="max-w-3xl mx-auto px-6 pb-24 space-y-4">
+
+        <!-- BLOG ITEM (PREMIUM INTERACTIVE CARD) -->
+        <a class="group block p-6 border border-white/10 rounded-xl backdrop-blur-sm
+           bg-white/5 hover:bg-white/10 transition-all duration-300 reveal
+           hover:-translate-y-1 hover:shadow-lg hover:shadow-black/30" href="blogs/blog1.html">
+
+            <div class="flex flex-row items-center justify-between">
+
+                <!-- Left: Title + Date -->
+                <div class="flex flex-col">
+                    <p class="text-lg font-semibold tracking-tight text-white group-hover:underline">
+                        1. What Is our Life?
+                    </p>
+
+                    <span class="text-sm text-gray-300 mt-1">
+                        2025-04-28
+                    </span>
+                </div>
+
+                <!-- Right: Animated Arrow Button -->
+                <div class="h-10 w-10 flex items-center justify-center rounded-full 
+                    bg-white/10 text-gray-300 transition-all duration-300
+                    group-hover:bg-white/20 group-hover:w-12 group-hover:h-12
+                    group-hover:translate-x-1">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-all duration-300 
+                         group-hover:scale-110 group-hover:translate-x-0.5" fill="none" viewBox="0 0 30 30"
+                        stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+
+                </div>
+            </div>
+        </a>
+
+
+        <!-- ADD MORE BLOG ENTRIES BELOW THIS LINE (just copy/paste) -->
+    </section>
+
+
+    <!-- Reveal Animation Script -->
+    <script>
+        const revealElements = document.querySelectorAll(".reveal");
+        function checkReveal() {
+            revealElements.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 50) el.classList.add("active");
+            });
+        }
+        window.addEventListener("scroll", checkReveal);
+        window.onload = checkReveal;
+    </script>
+
+</body>
+
+</html>

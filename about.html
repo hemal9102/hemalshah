@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blog – Hemal Shah | SpringSummer</title>
-  <meta name="description" content="Thoughts, insights, and reflections by Hemal Shah on AI, automation, life, and engineering." />
+  <title>About – Hemal Shah | SpringSummer</title>
+  <meta name="description" content="About Hemal Shah – AI Engineer, Python Developer, and automation specialist." />
   <link rel="icon" href="assets/favicon.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -20,10 +20,10 @@
     <nav class="nav" id="main-nav" aria-label="Main navigation">
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a href="about.html" class="active">About</a></li>
         <li><a href="work.html">Work</a></li>
         <li><a href="services.html">Skills</a></li>
-        <li><a href="blogs.html" class="active">Blog</a></li>
+        <li><a href="blogs.html">Blog</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
@@ -39,7 +39,7 @@
         <span class="dock-tooltip">Home</span>
         <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
       </a>
-      <a class="dock-btn" href="blogs.html" data-page="blogs.html" title="Blog" style="color:#fff;background:rgba(59,130,246,0.15);">
+      <a class="dock-btn" href="blogs.html" data-page="blogs.html" title="Blog">
         <span class="dock-tooltip">Blog</span>
         <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20"/><path d="M4 3v16.5"/><path d="M8 3h12v18H8z"/></svg>
       </a>
@@ -52,9 +52,9 @@
         <span class="dock-tooltip">LinkedIn</span>
         <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zm1.78 13.02H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.73V1.73C24 .77 23.21 0 22.23 0z"/></svg>
       </a>
-      <a class="dock-btn" href="https://www.instagram.com/hemal__shah_/" target="_blank" rel="noopener" title="Instagram">
+      <a class="dock-btn" href="https://www.instagram.com/hemall_9/" target="_blank" rel="noopener" title="Instagram">
         <span class="dock-tooltip">Instagram</span>
-        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zm4.25 3.25a5.25 5.25 0 1 1 0 10.5 5.25 5.25 0 0 1 0-10.5zm0 1.5a3.75 3.75 0 1 0 0 7.5 3.75 3.75 0 0 0 0-7.5zm5.75-.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg>
       </a>
       <a class="dock-btn" href="mailto:hemal.shah2004@gmail.com" title="Email">
         <span class="dock-tooltip">Email</span>
@@ -65,97 +65,133 @@
 
   <!-- ── Page Hero ──────────────────────────── -->
   <section class="page-hero">
-    <h1 class="reveal">My <span class="gradient-text">Blog</span></h1>
-    <p class="reveal reveal-delay-1">Thoughts on AI, automation, life, and everything in between.</p>
+    <h1 class="reveal">About <span class="gradient-text">Me</span></h1>
+    <p class="reveal reveal-delay-1">AI Engineer · Python Developer · Automation Enthusiast</p>
   </section>
 
-  <!-- ── Blog List ──────────────────────────── -->
+  <!-- ── About Content ──────────────────────── -->
   <section class="section">
     <div class="section-inner">
+      <div class="about-grid">
 
-      <div class="blog-list">
+        <!-- Left Column -->
+        <div>
+          <div class="about-card reveal">
+            <h3>Who I Am</h3>
+            <p>
+              I'm Hemal Shah — an AI Engineer and Python Developer with a passion for automation,
+              machine learning, and full-stack development. I'm obsessed with building workflows
+              that save time, reduce effort, and create real impact.
+            </p>
+            <p>
+              My mission is to turn ideas into working real-time systems—and turn my skills into income.
+              Whether it's a chess AI, an OCR Telegram bot, or a GitHub-inspired file platform,
+              I love solving real problems with elegant code.
+            </p>
+            <p>
+              I'm currently finishing my B.Tech, exploring paths at the intersection of software engineering,
+              AI, and entrepreneurship.
+            </p>
+          </div>
 
-        <!-- Blog 1 -->
-        <a class="blog-entry reveal" href="blogs/blog1.html">
-          <div class="blog-entry-inner">
-            <div>
-              <p class="blog-title">1. What Is Our Life?</p>
-              <p class="blog-date">Published: 2025-04-28</p>
-              <div class="blog-tags">
-                <span class="tag">Philosophy</span>
-                <span class="tag purple">Life</span>
-                <span class="tag green">Reflection</span>
-              </div>
-            </div>
-            <div class="blog-arrow">
-              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
-              </svg>
+          <div class="about-card reveal" style="margin-top:1.5rem;">
+            <h3>Philosophy</h3>
+            <blockquote style="border-left:3px solid rgba(59,130,246,0.5);padding-left:1rem;font-style:italic;color:var(--color-text-muted);margin-bottom:1rem;">
+              "Do your karma. Do not be attached to the result." — Bhagavad Gita
+            </blockquote>
+            <p>
+              I believe life is a delicate mixture of hard work and intentionality.
+              I try to focus on the process — building skills, shipping projects, staying consistent.
+              History remembers those who choose to rise above their circumstances.
+            </p>
+          </div>
+
+          <div class="about-card reveal" style="margin-top:1.5rem;">
+            <h3>Links & Resources</h3>
+            <div style="display:flex;flex-direction:column;gap:0.75rem;margin-top:0.5rem;">
+              <a href="assets/bk_hk.pdf" class="cta-button primary" target="_blank"
+                 style="justify-content:center;font-size:0.9rem;padding:0.65rem 1rem;">
+                Download Resume
+              </a>
+              <a href="https://www.linkedin.com/in/hemal-shah-49a728362/" class="cta-button secondary" target="_blank" rel="noopener"
+                 style="justify-content:center;font-size:0.9rem;padding:0.65rem 1rem;">
+                Connect on LinkedIn
+              </a>
+              <a href="https://github.com/hemal9102" class="cta-button secondary" target="_blank" rel="noopener"
+                 style="justify-content:center;font-size:0.9rem;padding:0.65rem 1rem;">
+                GitHub Profile
+              </a>
             </div>
           </div>
-        </a>
+        </div>
 
-        <!-- Blog 2 -->
-        <a class="blog-entry reveal reveal-delay-1" href="blogs/blog2.html">
-          <div class="blog-entry-inner">
-            <div>
-              <p class="blog-title">2. Why I Chose Automation Over a 9-to-5</p>
-              <p class="blog-date">Published: 2025-05-10</p>
-              <div class="blog-tags">
-                <span class="tag">Automation</span>
-                <span class="tag orange">Career</span>
-              </div>
+        <!-- Right Column -->
+        <div>
+          <div class="about-card reveal reveal-delay-1">
+            <h3>Experience & Education</h3>
+            <ul class="timeline">
+              <li>
+                <strong>B.Tech – Computer Science & Engineering</strong>
+                <span>2021 – 2025</span>
+                Final year, focusing on AI, ML, and software engineering.
+              </li>
+              <li>
+                <strong>Freelance Automation & AI Developer</strong>
+                <span>2023 – Present</span>
+                Building custom automation workflows, AI bots, and full-stack applications for clients.
+              </li>
+              <li>
+                <strong>Open Source Contributor</strong>
+                <span>2022 – Present</span>
+                Active GitHub contributor building tools in Python, FastAPI, and Unity.
+              </li>
+            </ul>
+          </div>
+
+          <div class="about-card reveal reveal-delay-2" style="margin-top:1.5rem;">
+            <h3>What I've Explored</h3>
+            <ul class="timeline">
+              <li>
+                <strong>Bodybuilding &amp; Fitness</strong>
+                <span>Discipline &amp; growth mindset</span>
+                Physical training taught me consistency and structured improvement.
+              </li>
+              <li>
+                <strong>Art, Sketching &amp; Craft</strong>
+                <span>Creative thinking</span>
+                Visual creativity sharpens UI/UX and design sensibility.
+              </li>
+              <li>
+                <strong>Reading &amp; Writing</strong>
+                <span>Philosophy &amp; self-improvement</span>
+                Books on Stoicism, the Bhagavad Gita, and tech keep me grounded.
+              </li>
+              <li>
+                <strong>Computers &amp; Systems</strong>
+                <span>Core passion</span>
+                From first code to production deployments — always learning.
+              </li>
+            </ul>
+          </div>
+
+          <!-- Stats -->
+          <div class="stats-row" style="margin-top:1.5rem;">
+            <div class="stat-item reveal reveal-delay-1">
+              <span class="stat-number gradient-text">3+</span>
+              <span class="stat-label">Projects</span>
             </div>
-            <div class="blog-arrow">
-              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
-              </svg>
+            <div class="stat-item reveal reveal-delay-2">
+              <span class="stat-number gradient-text">9+</span>
+              <span class="stat-label">Technologies</span>
+            </div>
+            <div class="stat-item reveal reveal-delay-3">
+              <span class="stat-number gradient-text">∞</span>
+              <span class="stat-label">Drive</span>
             </div>
           </div>
-        </a>
-
-        <!-- Blog 3 -->
-        <a class="blog-entry reveal reveal-delay-2" href="blogs/blog3.html">
-          <div class="blog-entry-inner">
-            <div>
-              <p class="blog-title">3. Building My First AI Project – Lessons Learned</p>
-              <p class="blog-date">Published: 2025-05-20</p>
-              <div class="blog-tags">
-                <span class="tag">AI</span>
-                <span class="tag green">Python</span>
-                <span class="tag purple">Learning</span>
-              </div>
-            </div>
-            <div class="blog-arrow">
-              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
-              </svg>
-            </div>
-          </div>
-        </a>
-
-        <!-- Blog 4 -->
-        <a class="blog-entry reveal reveal-delay-3" href="blogs/blog4.html">
-          <div class="blog-entry-inner">
-            <div>
-              <p class="blog-title">4. n8n vs Python Scripts – When to Use Which</p>
-              <p class="blog-date">Published: 2025-06-01</p>
-              <div class="blog-tags">
-                <span class="tag">n8n</span>
-                <span class="tag">Python</span>
-                <span class="tag orange">Comparison</span>
-              </div>
-            </div>
-            <div class="blog-arrow">
-              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
-              </svg>
-            </div>
-          </div>
-        </a>
+        </div>
 
       </div>
-
     </div>
   </section>
 

@@ -1,197 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
-        body {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            font-family: 'Inter', sans-serif;
-            overflow-x: hidden;
-        }
-
-        /* Reveal Animation */
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-        }
-
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-            transition: all 0.7s ease;
-        }
-
-        /* Back Button Animation */
-        .back-btn {
-            transition: all 0.3s ease;
-        }
-
-        .back-btn:hover {
-            transform: translateX(-4px);
-            color: #fff;
-        }
-
-        .back-arrow {
-            transition: transform 0.3s ease;
-        }
-
-        .back-btn:hover .back-arrow {
-            transform: translateX(-4px);
-        }
-
-        /* Card Glass Look */
-        .glass-box {
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(10px);
-            border-radius: 16px;
-            padding: 28px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What Is Our Life? – Blog | SpringSummer</title>
+  <meta name="description" content="A philosophical reflection on the meaning of life, karma, and finding your path – by Hemal Shah." />
+  <link rel="icon" href="../assets/favicon.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
 </head>
+<body>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
 
-<body class="p-6 max-w-3xl mx-auto">
+  <!-- ── Header ─────────────────────────────── -->
+  <header class="site-header">
+    <a href="../index.html" class="logo"><img src="../assets/favicon.png" alt="SpringSummer" class="logo-img" /></a>
+    <nav class="nav" id="main-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../work.html">Work</a></li>
+        <li><a href="../services.html">Skills</a></li>
+        <li><a href="../blogs.html" class="active">Blog</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
 
-    <!-- Back Button -->
-    <a href="../blogs.html" class="back-btn text-gray-300 text-sm flex items-center gap-1 mb-8 hover:text-white">
-        <span class="back-arrow">←</span> Back to Blogs
-    </a>
+  <!-- ── Floating Dock ──────────────────────── -->
+  <nav class="floating-dock" aria-label="Quick navigation">
+    <div class="dock-inner">
+      <a class="dock-btn" href="../index.html" title="Home">
+        <span class="dock-tooltip">Home</span>
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      </a>
+      <a class="dock-btn" href="../blogs.html" title="Blog" style="color:#fff;background:rgba(59,130,246,0.15);">
+        <span class="dock-tooltip">Blog</span>
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20"/><path d="M4 3v16.5"/><path d="M8 3h12v18H8z"/></svg>
+      </a>
+      <div class="dock-divider"></div>
+      <a class="dock-btn" href="https://github.com/hemal9102" target="_blank" rel="noopener" title="GitHub">
+        <span class="dock-tooltip">GitHub</span>
+        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.79-.26.79-.58v-2.23c-3.34.73-4.03-1.42-4.03-1.42-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.49 1 .11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.19.69.8.58A12 12 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+      </a>
+      <a class="dock-btn" href="https://www.linkedin.com/in/hemal-shah-49a728362/" target="_blank" rel="noopener" title="LinkedIn">
+        <span class="dock-tooltip">LinkedIn</span>
+        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zm1.78 13.02H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.73V1.73C24 .77 23.21 0 22.23 0z"/></svg>
+      </a>
+      <a class="dock-btn" href="https://www.instagram.com/hemal__shah_/" target="_blank" rel="noopener" title="Instagram">
+        <span class="dock-tooltip">Instagram</span>
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+      </a>
+      <a class="dock-btn" href="mailto:hemal.shah2004@gmail.com" title="Email">
+        <span class="dock-tooltip">Email</span>
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+      </a>
+    </div>
+  </nav>
 
-    <!-- BLOG WRAPPER -->
-    <div class="glass-box reveal">
+  <!-- ── Blog Content ────────────────────────── -->
+  <section class="section" style="padding-top:calc(var(--header-height) + 3rem);">
+    <div class="section-inner">
 
-        <!-- Blog Title -->
-        <h1 class="text-4xl font-bold text-white mb-2">What Is a Life?</h1>
-        <p class="text-gray-200/80 text-sm mb-8">Published on October 25, 2025</p>
+      <a href="../blogs.html" class="blog-back reveal">
+        ← Back to Blog
+      </a>
 
-        <!-- Blog Content -->
-        <article class="space-y-6 leading-relaxed text-gray-100">
+      <div class="blog-post reveal">
 
-            <p>
-                What is our life, really? I ask myself this question so many times —
-                <em>What exactly is my life meant for?</em>
-                I stand at so many turning points hoping for an answer… but the answer never stands still long enough.
-            </p>
+        <div class="blog-tags" style="margin-bottom:1rem;">
+          <span class="tag">Philosophy</span>
+          <span class="tag purple">Life</span>
+          <span class="tag green">Reflection</span>
+        </div>
 
-            <p>
-                Till now, I’ve touched so many paths —
-                <strong>bodybuilding, art, craft, sketching, computers, grooming, reading, writing</strong> —
-                and I’m still exploring. I’m in the final year of my B.Tech. In the next few months, this chapter of my
-                life will end.
-            </p>
+        <h1>What Is Our Life?</h1>
+        <p class="blog-meta">Published on April 28, 2025 · 6 min read</p>
 
-            <p>
-                Earlier, I used to feel lost: I had no strong skills, no real experience, no emotional intelligence,
-                nothing to anchor me. But slowly, step by step, improvement arrived. A little discipline.
-                A little clarity. A little growth.
-            </p>
+        <article>
 
-            <h2 class="text-2xl font-semibold mt-10 text-white">Who Am I? Where Am I Going?</h2>
+          <p>
+            What is our life, really? I ask myself this question so many times —
+            <em>What exactly is my life meant for?</em>
+            I stand at so many turning points hoping for an answer… but the answer never stands still long enough.
+          </p>
 
-            <p>
-                This question hits me every time I try to motivate myself. Am I the main character in my own story,
-                or just a background character in someone else’s world?
-            </p>
+          <p>
+            Till now, I've touched so many paths —
+            <strong>bodybuilding, art, craft, sketching, computers, grooming, reading, writing</strong> —
+            and I'm still exploring. I'm in the final year of my B.Tech. In the next few months, this chapter of my
+            life will end.
+          </p>
 
-            <p>
-                I look at my brother, who is my age and already contributing to his father’s business. That’s not a
-                small thing.
-                I look at my older brother who became a CA and is building stability for himself — and even for the next
-                generation.
-            </p>
+          <p>
+            Earlier, I used to feel lost: I had no strong skills, no real experience, no emotional intelligence,
+            nothing to anchor me. But slowly, step by step, improvement arrived. A little discipline.
+            A little clarity. A little growth.
+          </p>
 
-            <p>
-                From what I see, life is a delicate mixture of luck and hard work — both shaping us in ways we often
-                don’t understand. And whenever I think about this balance, Krishna’s words return to me like a quiet
-                reminder:
-            </p>
+          <h2>Who Am I? Where Am I Going?</h2>
 
-            <blockquote class="border-l-4 border-white/30 pl-4 italic text-gray-200">
-                “Do your karma. Do not be attached to the result.”
-            </blockquote>
+          <p>
+            This question hits me every time I try to motivate myself. Am I the main character in my own story,
+            or just a background character in someone else's world?
+          </p>
 
-            <p>
-                But what does that truly mean for me? Does it imply that my life is already shaped by the structure of
-                my karma,
-                written long before I was born? Or does it give me the freedom to rise above it?
-            </p>
+          <p>
+            I look at my brother, who is my age and already contributing to his father's business. That's not a
+            small thing.
+            I look at my older brother who became a CA and is building stability for himself — and even for the next
+            generation.
+          </p>
 
-            <p>
-                Then another thought follows — Krishna’s declaration of his universal nature:
-            </p>
+          <p>
+            From what I see, life is a delicate mixture of luck and hard work — both shaping us in ways we often
+            don't understand. And whenever I think about this balance, Krishna's words return to me like a quiet
+            reminder:
+          </p>
 
-            <blockquote class="border-l-4 border-white/30 pl-4 italic text-gray-200">
-                “I am the universe. I am destruction. I am the beginning and the end.
-                I am the stars, the earth, and the sky.”
-            </blockquote>
+          <blockquote>
+            "Do your karma. Do not be attached to the result."
+          </blockquote>
 
-            <p>
-                If Krishna embodies everything, then what am I in this vast design? What role do I play?
-            </p>
+          <p>
+            But what does that truly mean for me? Does it imply that my life is already shaped by the structure of
+            my karma, written long before I was born? Or does it give me the freedom to rise above it?
+          </p>
 
-            <p>
-                And just as this question forms, a deeper truth echoes:
-            </p>
+          <p>
+            Then another thought follows — Krishna's declaration of his universal nature:
+          </p>
 
-            <blockquote class="border-l-4 border-white/30 pl-4 italic text-gray-200">
-                “The soul is never born, and it never dies. The same energy that lives in a newborn child
-                exists in an old dying man.”
-            </blockquote>
+          <blockquote>
+            "I am the universe. I am destruction. I am the beginning and the end.
+            I am the stars, the earth, and the sky."
+          </blockquote>
 
-            <p>
-                If the soul remains forever unchanged and eternal, then what about the actions I take in this temporary
-                life?
-                Even if I achieve something remarkable, am I driven by pure intention — or by a hidden selfishness I
-                haven’t yet understood?
-            </p>
+          <p>
+            If Krishna embodies everything, then what am I in this vast design? What role do I play?
+          </p>
 
-            <p>
-                Does Arjun become the main character because of the purity of his soul, or simply because the story
-                needed him to be?
-                Does someone born in a small village automatically become a background character?
-            </p>
+          <p>
+            And just as this question forms, a deeper truth echoes:
+          </p>
 
-            <p>
-                History remembers the ones who choose to rise — the ones who decide to become more than their
-                circumstances.
-                And maybe that is where the real difference lies.
-            </p>
+          <blockquote>
+            "The soul is never born, and it never dies. The same energy that lives in a newborn child
+            exists in an old dying man."
+          </blockquote>
 
+          <p>
+            If the soul remains forever unchanged and eternal, then what about the actions I take in this temporary
+            life?
+            Even if I achieve something remarkable, am I driven by pure intention — or by a hidden selfishness I
+            haven't yet understood?
+          </p>
 
-            <h2 class="text-2xl font-semibold mt-10 text-white">So… What Is Life?</h2>
+          <p>
+            Does Arjun become the main character because of the purity of his soul, or simply because the story
+            needed him to be?
+            Does someone born in a small village automatically become a background character?
+          </p>
 
-            <p>
-                Maybe life isn’t about finding an answer. Maybe it’s about living the questions with honesty,
-                courage, discipline, and awareness — until one day, the answer reveals itself.
-            </p>
+          <p>
+            History remembers the ones who choose to rise — the ones who decide to become more than their
+            circumstances.
+            And maybe that is where the real difference lies.
+          </p>
+
+          <h2>So… What Is Life?</h2>
+
+          <p>
+            Maybe life isn't about finding an answer. Maybe it's about living the questions with honesty,
+            courage, discipline, and awareness — until one day, the answer reveals itself.
+          </p>
+
+          <p>
+            I don't know where I'm going yet. But I know that I want to go somewhere meaningful.
+            I want to build things that matter. I want to be someone my future self is proud of.
+          </p>
+
+          <p>
+            And maybe that desire — that refusal to stay still — is the truest answer I have right now.
+          </p>
 
         </article>
 
+        <!-- Navigation between posts -->
+        <hr class="divider" style="margin-top:3rem;" />
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;margin-top:1.5rem;">
+          <span style="color:var(--color-text-muted);font-size:0.85rem;">← Previous post</span>
+          <a href="blog2.html" class="card-link">
+            Next: Why I Chose Automation Over a 9-to-5 →
+          </a>
+        </div>
+      </div>
+
     </div>
+  </section>
 
-    <script>
-        // Reveal on scroll
-        const reveals = document.querySelectorAll(".reveal");
-        function revealCheck() {
-            reveals.forEach(el => {
-                const rect = el.getBoundingClientRect();
-                if (rect.top < window.innerHeight - 50) {
-                    el.classList.add("active");
-                }
-            });
-        }
-        window.addEventListener("scroll", revealCheck);
-        window.onload = revealCheck;
-    </script>
+  <!-- ── Footer ─────────────────────────────── -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="../index.html" class="logo"><img src="../assets/favicon.png" alt="SpringSummer" class="logo-img" /></a>
+        <p>Automation Engineer · Python Developer · Full-stack Developer</p>
+      </div>
+      <nav class="footer-nav">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../work.html">Work</a></li>
+          <li><a href="../services.html">Skills</a></li>
+          <li><a href="../blogs.html">Blog</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="footer-social">
+        <h4>Connect</h4>
+        <div class="social-row">
+          <a class="social-btn" href="https://github.com/hemal9102" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.79-.26.79-.58v-2.23c-3.34.73-4.03-1.42-4.03-1.42-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.49 1 .11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.19.69.8.58A12 12 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a class="social-btn" href="https://www.linkedin.com/in/hemal-shah-49a728362/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zm1.78 13.02H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.73V1.73C24 .77 23.21 0 22.23 0z"/></svg>
+          </a>
+          <a class="social-btn" href="mailto:hemal.shah2004@gmail.com" aria-label="Email">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Hemal Shah · SpringSummer Portfolio. All rights reserved.</p>
+    </div>
+  </footer>
 
+  <script src="../script.js"></script>
 </body>
-
 </html>

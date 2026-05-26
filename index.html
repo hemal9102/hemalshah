@@ -1,574 +1,477 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- SEO Meta Tags -->
-    <title>Hemal Shah - AI Engineer & Python Developer</title>
-    <meta name="description"
-        content="Portfolio of Hemal Shah, AI Engineer specializing in Python, Machine Learning, and Automation. Explore my projects in AI, web development, and workflow automation.">
-    <meta name="keywords"
-        content="AI Engineer, Python Developer, Machine Learning, Automation, Full Stack Developer, Hemal Shah">
-    <meta name="author" content="Hemal Shah">
-    <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self' https: 'unsafe-inline' 'unsafe-eval'; script-src 'self' https: 'unsafe-inline' 'unsafe-eval' blob:; img-src 'self' https: data:; font-src 'self' https: data:;">
-    <link rel="canonical" href="https://hemal9102.github.io/hemalshah/">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SpringSummer | Hemal Shah – AI Engineer & Python Developer</title>
+  <meta name="description" content="Portfolio of Hemal Shah, AI Engineer specialising in Python, Machine Learning, and Automation. Explore projects in AI, web development, and workflow automation." />
+  <meta name="keywords" content="AI Engineer, Python Developer, Machine Learning, Automation, Full Stack Developer, Hemal Shah" />
+  <meta name="author" content="Hemal Shah" />
+  <link rel="canonical" href="https://hemal9102.github.io/springsummer_clone/" />
 
-    <!-- Open Graph / Social -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Hemal Shah - AI Engineer & Python Developer">
-    <meta property="og:description" content="Explore my projects in AI, web development, and workflow automation.">
-    <meta property="og:image" content="https://hemal9102.github.io/hemalshah/resources/supabase-logo-icon.png">
-    <meta property="og:url" content="https://hemal9102.github.io/hemalshah/">
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="SpringSummer | Hemal Shah – AI Engineer & Python Developer" />
+  <meta property="og:description" content="Explore projects in AI, web development, and workflow automation." />
+  <meta property="og:url"         content="https://hemal9102.github.io/springsummer_clone/" />
 
-    <!-- JSON-LD Structured Data for SEO -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org/",
-      "@type": "Person",
-      "name": "Hemal Shah",
-      "url": "https://hemal9102.github.io/hemalshah/",
-      "image": "https://hemal9102.github.io/hemalshah/resources/supabase-logo-icon.png",
-      "sameAs": [
-        "https://www.linkedin.com/in/hemal-shah-49a728362/",
-        "https://github.com/hemal9102",
-        "https://www.instagram.com/hemall_9/",
-        "https://www.youtube.com/@HK_mixedits"
-      ],
-      "jobTitle": "AI Engineer & Python Developer",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Freelance"
-      },
-      "description": "Hemal Shah is an AI Engineer and Python Developer specializing in Automation, Machine Learning, and Full Stack Development. Explore his projects in AI and web development."
-    }
-    </script>
+  <!-- Twitter -->
+  <meta name="twitter:card"  content="summary_large_image" />
+  <meta name="twitter:title" content="SpringSummer | Hemal Shah" />
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org/",
+    "@type": "Person",
+    "name": "Hemal Shah",
+    "url": "https://hemal9102.github.io/springsummer_clone/",
+    "sameAs": [
+      "https://www.linkedin.com/in/hemal-shah-49a728362/",
+      "https://github.com/hemal9102",
+      "https://www.instagram.com/hemall_9/",
+      "https://www.youtube.com/@HK_mixedits"
+    ],
+    "jobTitle": "AI Engineer & Python Developer",
+    "worksFor": { "@type": "Organization", "name": "Freelance" },
+    "description": "Hemal Shah is an AI Engineer and Python Developer specializing in Automation, Machine Learning, and Full Stack Development."
+  }
+  </script>
 
-    <!-- Core Libraries -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
-    <script src="https://unpkg.com/splitting@1.0.6/dist/splitting.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/splitting@1.0.6/dist/splitting.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+  <!-- Favicon -->
+  <link rel="icon" href="assets/favicon.png" type="image/png" />
 
-    <!-- Custom Styles -->
-    <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Typed.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js" defer></script>
+
+  <!-- p5.js (for particle system) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
 </head>
+<body>
+  <!-- 3D Animation: Scroll Progress & Cursor Glow -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
 
-<body class="transition-colors duration-300">
-    <!-- Floating right-side icon bar (compact) -->
-    <aside class="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50">
+  <!-- ── Site Header ─────────────────────────── -->
+  <header class="site-header">
+    <a href="index.html" class="logo"><img src="assets/favicon.png" alt="SpringSummer" class="logo-img" /></a>
+    <nav class="nav" id="main-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="services.html">Skills</a></li>
+        <li><a href="blogs.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="nav-toggle" id="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
 
-        <div class="sidebar-anim flex flex-row items-center gap-3 p-3 rounded-full border bg-background
-        [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]
-        animate-[breathe_4s_ease-in-out_infinite]">
+  <!-- ── Floating Bottom Dock ────────────────── -->
+  <nav class="floating-dock" aria-label="Quick navigation">
+    <div class="dock-inner">
+      <a class="dock-btn" href="index.html" data-page="index.html" title="Home">
+        <span class="dock-tooltip">Home</span>
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+          <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+      </a>
+      <a class="dock-btn" href="blogs.html" data-page="blogs.html" title="Blog">
+        <span class="dock-tooltip">Blog</span>
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20"/><path d="M4 3v16.5"/><path d="M8 3h12v18H8z"/>
+        </svg>
+      </a>
+      <div class="dock-divider"></div>
+      <a class="dock-btn" href="https://github.com/hemal9102" target="_blank" rel="noopener" title="GitHub">
+        <span class="dock-tooltip">GitHub</span>
+        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.79-.26.79-.58v-2.23c-3.34.73-4.03-1.42-4.03-1.42-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.49 1 .11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.19.69.8.58A12 12 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+        </svg>
+      </a>
+      <a class="dock-btn" href="https://www.linkedin.com/in/hemal-shah-49a728362/" target="_blank" rel="noopener" title="LinkedIn">
+        <span class="dock-tooltip">LinkedIn</span>
+        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zm1.78 13.02H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.73V1.73C24 .77 23.21 0 22.23 0z"/>
+        </svg>
+      </a>
+      <a class="dock-btn" href="https://www.instagram.com/hemall_9/" target="_blank" rel="noopener" title="Instagram">
+        <span class="dock-tooltip">Instagram</span>
+        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zm4.25 3.25a5.25 5.25 0 1 1 0 10.5 5.25 5.25 0 0 1 0-10.5zm0 1.5a3.75 3.75 0 1 0 0 7.5 3.75 3.75 0 0 0 0-7.5zm5.75-.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+        </svg>
+      </a>
+      <a class="dock-btn" href="mailto:hemal.shah2004@gmail.com" title="Email">
+        <span class="dock-tooltip">Email</span>
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+        </svg>
+      </a>
+    </div>
+  </nav>
 
-            <!-- Standard Button Class for ALL icons -->
-            <!-- width: 40px , height: 40px -->
-            <!-- perfectly circular, centered, consistent -->
+  <!-- ── Hero Section ──────────────────────── -->
+  <section class="hero">
+    <div class="hero-aurora" aria-hidden="true"></div>
+    <div class="hero-bg-gradient"></div>
+    <div id="particleContainer"></div>
 
-            <!-- Home -->
-            <div class="nav-btn icon-anim">
-                <a href="index.html">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="size-5" fill="none" stroke="currentColor"
-                        stroke-width="2">
-                        <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                        <polyline points="9 22 9 12 15 12 15 22" />
-                    </svg>
-                </a>
-            </div>
+    <!-- Floating Tech Icons -->
+    <div class="hero-floaters" aria-hidden="true">
+      <!-- Python -->
+      <div class="floater f1">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
+      </div>
+      <!-- Docker -->
+      <div class="floater f2">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" />
+      </div>
+      <!-- TensorFlow -->
+      <div class="floater f3">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" />
+      </div>
+      <!-- FastAPI -->
+      <div class="floater f4">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI" />
+      </div>
+      <!-- Kubernetes -->
+      <div class="floater f5">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" alt="Kubernetes" />
+      </div>
+      <!-- GitHub -->
+      <div class="floater f6">
+        <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24" style="color:#e2e8f0">
+          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.79-.26.79-.58v-2.23c-3.34.73-4.03-1.42-4.03-1.42-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.49 1 .11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.19.69.8.58A12 12 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+        </svg>
+      </div>
+      <!-- n8n text badge -->
+      <div class="floater f7 floater-text-badge">
+        <span>n8n</span>
+      </div>
+      <!-- OpenCV -->
+      <div class="floater f8">
+        <img src="https://www.vectorlogo.zone/logos/opencv/opencv-icon.svg" alt="OpenCV" />
+      </div>
+    </div>
 
-            <!-- Instagram -->
-            <div class="nav-btn icon-anim" title="Instagram">
-                <a href="https://www.instagram.com/hemall_9/" target="_blank">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-                        <path
-                            d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5Zm4.25 3.25a5.25 5.25 0 1 1 0 10.5 5.25 5.25 0 0 1 0-10.5Zm0 1.5a3.75 3.75 0 1 0 0 7.5 3.75 3.75 0 0 0 0-7.5Zm5.75-.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z">
-                        </path>
-                    </svg>
-                </a>
-            </div>
+    <!-- Centred Hero Content -->
+    <div class="hero-content">
+      <h1 class="reveal">Hemal <span class="gradient-text">Shah</span></h1>
 
-            <!-- Email -->
-            <div class="nav-btn icon-anim" title="Email">
-                <a href="mailto:hemal.shah2004@gmail.com">
-                    <svg viewBox="0 0 24 24" fill="currentColor" class="size-5">
-                        <path
-                            d="M12 13.065L0 6.064V19.2c0 .442.358.8.8.8H23.2c.442 0 .8-.358.8-.8V6.064l-12 7.001zM12 10.935l12-7.001V4.8c0-.442-.358-.8-.8-.8H.8C.358 4 0 4.358 0 4.8v.134l12 7.001z">
-                        </path>
-                    </svg>
-                </a>
-            </div>
+      <div class="hero-subtitle-row reveal reveal-delay-1">
+        <span class="subtitle-rule"></span>
+        <span class="hero-subtitle-inner">
+          <span id="typed-text"></span><span class="typewriter-cursor">|</span>
+        </span>
+        <span class="subtitle-rule"></span>
+      </div>
 
-            <!-- YouTube -->
-            <div class="nav-btn icon-anim" title="YouTube">
-                <a href="https://www.youtube.com/@HK_mixedits" target="_blank">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-                        <path
-                            d="M23.5 6.2s-.2-1.7-.9-2.5a3.3 3.3 0 0 0-2.3-.9C17 2.5 12 2.5 12 2.5s-5 0-8.3.3a3.3 3.3 0 0 0-2.3.9C.7 4.5.5 6.2.5 6.2S0 8.2 0 10.2v1.6c0 2 .5 4 5.2 4.3 3.3.3 6.8.3 6.8.3s5 0 8.3-.3c2.3-.2 3.2-1.5 3.5-2.4.3-.9.5-2.5.5-2.5s.2-1.7.2-3.7V10c0-2-.2-3.8-.2-3.8z" />
-                        <polygon fill="#fff" points="9.5,8 15.5,12 9.5,16" />
-                    </svg>
-                </a>
-            </div>
+      <p class="hero-description reveal reveal-delay-2">
+        I'm obsessed with automation. I build workflows that save time, reduce effort,
+        and create real impact — turning ideas into working real-time systems.
+      </p>
 
-            <!-- Blog -->
-            <div class="nav-btn icon-anim" title="Blog">
-                <a href="blogs.html">
-                    <svg width="24" height="24" stroke="currentColor" stroke-width="2">
-                        <path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20"></path>
-                        <path d="M4 3v16.5"></path>
-                        <path d="M8 3h12v18H8z"></path>
-                    </svg>
-                </a>
-            </div>
+      <div class="hero-tags reveal reveal-delay-3">
+        <span class="hero-tag">Python</span>
+        <span class="hero-tag">n8n</span>
+        <span class="hero-tag">Docker</span>
+        <span class="hero-tag">TensorFlow</span>
+        <span class="hero-tag">FastAPI</span>
+        <span class="hero-tag">OpenCV</span>
+      </div>
 
+      <div class="hero-cta reveal reveal-delay-4">
+        <a href="work.html" class="cta-hero-btn primary">View My Work →</a>
+        <a href="contact.html" class="cta-hero-btn secondary">Get in Touch</a>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <span class="scroll-label">Scroll to explore</span>
+      <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ── Stats Row ─────────────────────────── -->
+  <section class="section bg-alt">
+    <div class="section-inner">
+      <div class="stats-row">
+        <div class="stat-item reveal">
+          <span class="stat-number gradient-text">3+</span>
+          <span class="stat-label">Projects Built</span>
         </div>
-    </aside>
+        <div class="stat-item reveal reveal-delay-1">
+          <span class="stat-number gradient-text">9+</span>
+          <span class="stat-label">Technologies</span>
+        </div>
+        <div class="stat-item reveal reveal-delay-2">
+          <span class="stat-number gradient-text">100%</span>
+          <span class="stat-label">Automation Focus</span>
+        </div>
+        <div class="stat-item reveal reveal-delay-3">
+          <span class="stat-number gradient-text">∞</span>
+          <span class="stat-label">Learning Drive</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- ── Featured Skills ───────────────────── -->
+  <section class="section" id="skills">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
+        <p>Technologies and tools I work with daily</p>
+      </div>
 
-    <!-- page content padded to avoid sidebar -->
-    <div class="content-with-sidebar">
-        <!-- Hero Section -->
-        <section id="home" class="hero-bg min-h-screen flex items-center justify-center relative">
-            <div id="particleContainer" class="particle-bg"></div>
+      <div class="skills-grid">
 
-            <div class="content-overlay max-w-6xl mx-auto px-6 py-20">
-                <div class="grid lg:grid-cols-2 gap-12 items-center">
-                    <!-- Left Content -->
-                    <div class="text-center lg:text-left">
-                        <h1 class="text-5xl lg:text-7xl font-bold text-white mb-6 reveal">
-                            <span class="gradient-text">Hemal Shah</span>
-                        </h1>
+        <div class="skill-card reveal hover-lift">
+          <div class="skill-card-header">
+            <img src="https://kimi-web-img.moonshot.cn/img/1.bp.blogspot.com/8c36a2826c55d1ed8322b8f4b5d30d95fb3923fc.png" alt="Python" />
+            <h3>Python</h3>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-width="95%"></div></div>
+          <p class="skill-label">AI / ML Development</p>
+        </div>
 
-                        <div class="text-xl lg:text-2xl text-blue-100 mb-8 reveal">
-                            <span id="typed-text"></span>
-                            <span class="typewriter-cursor">|</span>
-                        </div>
+        <div class="skill-card reveal reveal-delay-1 hover-lift">
+          <div class="skill-card-header">
+            <img src="https://n8n.io/favicon-32x32.png" alt="n8n" />
+            <h3>n8n</h3>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-width="90%"></div></div>
+          <p class="skill-label">Workflow Automation</p>
+        </div>
 
-                        <p class="text-lg text-blue-50 mb-8 leading-relaxed reveal">I’m obsessed with automation. I
-                            build workflows that save time, reduce effort, and create real impact. My mission is to turn
-                            ideas into working real-time systems—and turn my skills into income.
-                        </p>
+        <div class="skill-card reveal reveal-delay-2 hover-lift">
+          <div class="skill-card-header">
+            <img src="https://www.vectorlogo.zone/logos/unity3d/unity3d-icon.svg" alt="Unity" />
+            <h3>Unity</h3>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-width="85%"></div></div>
+          <p class="skill-label">Game Development</p>
+        </div>
 
-                        <!-- <div class="grid grid-cols-2 gap-4 w-fit mx-auto lg:mx-0 reveal">
-                            <a href="resources/Resume.pdf"
-                                class="hover-lift bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold flex items-center justify-center gap-2">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
-                                    </path>
-                                </svg>
-                                Download Resume
-                            </a>
+        <div class="skill-card reveal reveal-delay-3 hover-lift">
+          <div class="skill-card-header">
+            <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="Postman" />
+            <h3>Postman</h3>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-width="88%"></div></div>
+          <p class="skill-label">API Testing</p>
+        </div>
 
-                            <a href="https://www.linkedin.com/in/hemal-shah-49a728362/" target="_blank"
-                                class="hover-lift border-2 border-white text-white px-8 py-4 rounded-lg font-semibold flex items-center justify-center gap-2">
-                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                    <path
-                                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z">
-                                    </path>
-                                </svg>
-                                LinkedIn
-                            </a>
+        <div class="skill-card reveal hover-lift">
+          <div class="skill-card-header">
+            <img src="https://opencv.org/wp-content/uploads/2020/07/OpenCV_logo_no_text_.png" alt="OpenCV" />
+            <h3>OpenCV</h3>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-width="88%"></div></div>
+          <p class="skill-label">Image Detection</p>
+        </div>
 
-                            <a href="resources/CV.pdf" target="_blank"
-                                class="hover-lift border-2 border-white text-white px-8 py-4 rounded-lg font-semibold flex items-center justify-center gap-2">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M12 3v12m0 0l-3-3m3 3l3-3M21 21H3"></path>
-                                </svg>
-                                Download CV
-                            </a>
+        <div class="skill-card reveal reveal-delay-1 hover-lift">
+          <div class="skill-card-header">
+            <img src="https://www.vectorlogo.zone/logos/supabase/supabase-icon.svg" alt="Supabase" />
+            <h3>Supabase</h3>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-width="88%"></div></div>
+          <p class="skill-label">Backend as a Service</p>
+        </div>
 
-                            <a href="https://github.com/hemal9102" target="_blank"
-                                class="hover-lift border-2 border-white text-white px-8 py-4 rounded-lg font-semibold flex items-center justify-center gap-2">
-                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                    <path
-                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 10.92.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
-                                    </path>
-                                </svg>
-                                GitHub
-                            </a>
-                        </div>-->
-                    </div>
+        <div class="skill-card reveal reveal-delay-2 hover-lift">
+          <div class="skill-card-header">
+            <img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" alt="TensorFlow" />
+            <h3>TensorFlow</h3>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-width="80%"></div></div>
+          <p class="skill-label">Machine Learning</p>
+        </div>
 
-                    <!-- Right Content - Hero Image -->
+        <div class="skill-card reveal reveal-delay-3 hover-lift">
+          <div class="skill-card-header">
+            <img src="https://www.vectorlogo.zone/logos/docker/docker-icon.svg" alt="Docker" />
+            <h3>Docker</h3>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-width="75%"></div></div>
+          <p class="skill-label">Containerisation</p>
+        </div>
 
-                    <div class="reveal">
-                        <div class="relative">
-                            <div class="grid grid-cols-2 gap-4 w-fit mx-auto lg:mx-0 reveal">
-                                <a href="resources/Resume.pdf"
-                                    class="hover-lift bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold flex items-center justify-center gap-2">
-                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
-                                        </path>
-                                    </svg>
-                                    Download Resume
-                                </a>
+        <div class="skill-card reveal hover-lift">
+          <div class="skill-card-header">
+            <img src="https://www.vectorlogo.zone/logos/kubernetes/kubernetes-icon.svg" alt="Kubernetes" />
+            <h3>Kubernetes</h3>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-width="70%"></div></div>
+          <p class="skill-label">Container Orchestration</p>
+        </div>
 
-                                <a href="https://www.linkedin.com/in/hemal-shah-49a728362/" target="_blank"
-                                    class="hover-lift border-2 border-white text-white px-8 py-4 rounded-lg font-semibold flex items-center justify-center gap-2">
-                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                        <path
-                                            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z">
-                                        </path>
-                                    </svg>
-                                    LinkedIn
-                                </a>
+      </div>
 
-                                <a href="resources/hk_cv.pdf" target="_blank"
-                                    class="hover-lift border-2 border-white text-white px-8 py-4 rounded-lg font-semibold flex items-center justify-center gap-2">
-                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M12 3v12m0 0l-3-3m3 3l3-3M21 21H3"></path>
-                                    </svg>
-                                    Download CV
-                                </a>
+      <div class="text-center" style="margin-top:2.5rem;">
+        <a href="services.html" class="cta-button outline">View All Skills →</a>
+      </div>
+    </div>
+  </section>
 
-                                <a href="https://github.com/hemal9102" target="_blank"
-                                    class="hover-lift border-2 border-white text-white px-8 py-4 rounded-lg font-semibold flex items-center justify-center gap-2">
-                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                        <path
-                                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 10.92.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
-                                        </path>
-                                    </svg>
-                                    GitHub
-                                </a>
-                            </div>
+  <!-- ── Featured Projects ──────────────────── -->
+  <section class="section bg-alt" id="projects">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+        <p>Explore my latest work in AI, automation, and web development</p>
+      </div>
 
-                            <!-- <img src="resources/photo1.png" height="100" width="400" alt="Hemal Shah - AI Engineer"
-                                class="w-full max-w-md mx-auto rounded-2xl shadow-2xl hover-lift">
-                        -->
-                            <div
-                                class="absolute -inset-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl opacity-20 blur-xl">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      <div class="projects-grid">
+
+        <!-- Chess AI -->
+        <div class="project-card reveal hover-lift">
+          <div class="project-thumb">
+            <img src="https://images.unsplash.com/photo-1586165368502-1bad197a6461?auto=format&fit=crop&w=800&q=80"
+                 alt="Chess AI Engine" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3>Chess AI Engine</h3>
+            <p>Advanced chess engine using minimax algorithm with alpha-beta pruning and neural network evaluation.</p>
+            <div class="tag-list">
+              <span class="tag">Python</span>
+              <span class="tag green">AI / ML</span>
+              <span class="tag purple">Pygame</span>
             </div>
+            <a href="https://github.com/hemal9102/ChessAI-Glasses" class="card-link" target="_blank" rel="noopener">
+              View Project →
+            </a>
+          </div>
+        </div>
 
-            <!-- Scroll Indicator -->
-            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                </svg>
+        <!-- n8n OCR Bot -->
+        <div class="project-card reveal reveal-delay-1 hover-lift">
+          <div class="project-thumb">
+            <img src="resources/ocr.jpg"
+                 alt="n8n OCR Telegram Bot" loading="lazy"
+                 onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80'" />
+          </div>
+          <div class="card-body">
+            <h3>n8n OCR Telegram Bot</h3>
+            <p>Automated Telegram bot that extracts text from images using OCR and n8n workflow automation.</p>
+            <div class="tag-list">
+              <span class="tag">n8n</span>
+              <span class="tag orange">OCR</span>
+              <span class="tag green">Telegram</span>
             </div>
-        </section>
+            <a href="work.html#ocr-bot" class="card-link">View Project →</a>
+          </div>
+        </div>
 
-        <!-- Skills Preview Section -->
-        <section id="skills" class="py-20 bg-white dark:bg-gray-800">
-            <div class="max-w-6xl mx-auto px-6">
-                <div class="text-center mb-16 reveal">
-                    <h2 class="text-4xl font-bold text-gray-800 dark:text-white mb-4">
-                        Technical <span class="gradient-text">Skills</span>
-                    </h2>
-                    <p class="text-xl text-gray-600 dark:text-gray-300">
-                        Technologies and tools I work with daily
-                    </p>
-                </div>
-
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <!-- Python -->
-                    <div class="skill-card reveal hover-lift bg-gray-50 dark:bg-gray-700 p-6 rounded-xl">
-                        <div class="flex items-center mb-4">
-                            <img src="https://kimi-web-img.moonshot.cn/img/1.bp.blogspot.com/8c36a2826c55d1ed8322b8f4b5d30d95fb3923fc.png"
-                                alt="Python" class="w-8 h-8 mr-3">
-                            <h3 class="text-lg font-semibold text-gray-800 dark:text-white">Python</h3>
-                        </div>
-                        <div class="skill-bar mb-2">
-                            <div class="skill-fill" data-width="95%"></div>
-                        </div>
-                        <p class="text-sm text-gray-600 dark:text-gray-300">AI/ML Development</p>
-                    </div>
-
-                    <!-- n8n -->
-                    <div class="skill-card reveal hover-lift bg-gray-50 dark:bg-gray-700 p-6 rounded-xl">
-                        <div class="flex items-center mb-4">
-                            <img src="https://n8n.io/favicon-32x32.png" alt="n8n" class="w-8 h-8 mr-3">
-                            <h3 class="text-lg font-semibold text-gray-800 dark:text-white">n8n</h3>
-                        </div>
-                        <div class="skill-bar mb-2">
-                            <div class="skill-fill" data-width="90%"></div>
-                        </div>
-                        <p class="text-sm text-gray-600 dark:text-gray-300">Automation</p>
-                    </div>
-
-                    <!-- Unity -->
-                    <div class="skill-card reveal hover-lift bg-gray-50 dark:bg-gray-700 p-6 rounded-xl">
-                        <div class="flex items-center mb-4">
-                            <img src="resources/unity.png" alt="Unity" class="w-8 h-8 mr-3">
-                            <h3 class="text-lg font-semibold text-gray-800 dark:text-white">Unity</h3>
-                        </div>
-                        <div class="skill-bar mb-2">
-                            <div class="skill-fill" data-width="85%"></div>
-                        </div>
-                        <p class="text-sm text-gray-600 dark:text-gray-300">Games</p>
-                    </div>
-
-                    <!-- Postman -->
-                    <div class="skill-card reveal hover-lift bg-gray-50 dark:bg-gray-700 p-6 rounded-xl">
-                        <div class="flex items-center mb-4">
-                            <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="Postman"
-                                class="w-8 h-8 mr-3">
-                            <h3 class="text-lg font-semibold text-gray-800 dark:text-white">Postman</h3>
-                        </div>
-                        <div class="skill-bar mb-2">
-                            <div class="skill-fill" data-width="88%"></div>
-                        </div>
-                        <p class="text-sm text-gray-600 dark:text-gray-300">Automation Testing</p>
-                    </div>
-
-                    <!-- OpenCV -->
-                    <div class="skill-card reveal hover-lift bg-gray-50 dark:bg-gray-700 p-6 rounded-xl">
-                        <div class="flex items-center mb-4">
-                            <img src="https://opencv.org/wp-content/uploads/2020/07/OpenCV_logo_no_text_.png"
-                                alt="OpenCV" class="w-8 h-8 mr-3">
-                            <h3 class="text-lg font-semibold text-gray-800 dark:text-white">OpenCV</h3>
-                        </div>
-                        <div class="skill-bar mb-2">
-                            <div class="skill-fill" data-width="88%"></div>
-                        </div>
-                        <p class="text-sm text-gray-600 dark:text-gray-300">Image Detection</p>
-                    </div>
-
-                    <!-- Supabase -->
-                    <div class="skill-card reveal hover-lift bg-gray-50 dark:bg-gray-700 p-6 rounded-xl">
-                        <div class="flex items-center mb-4">
-                            <img src="resources/supabase-logo-icon.png" alt="supabase" class="w-8 h-8 mr-3">
-                            <h3 class="text-lg font-semibold text-gray-800 dark:text-white">Supabase</h3>
-                        </div>
-                        <div class="skill-bar mb-2">
-                            <div class="skill-fill" data-width="88%"></div>
-                        </div>
-                        <p class="text-sm text-gray-600 dark:text-gray-300">Database</p>
-                    </div>
-
-                    <!-- TensorFlow -->
-                    <div class="skill-card reveal hover-lift bg-gray-50 dark:bg-gray-700 p-6 rounded-xl">
-                        <div class="flex items-center mb-4">
-                            <img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" alt="TensorFlow"
-                                class="w-8 h-8 mr-3">
-                            <h3 class="text-lg font-semibold text-gray-800 dark:text-white">TensorFlow</h3>
-                        </div>
-                        <div class="skill-bar mb-2">
-                            <div class="skill-fill" data-width="80%"></div>
-                        </div>
-                        <p class="text-sm text-gray-600 dark:text-gray-300">Machine Learning</p>
-                    </div>
-
-                    <!-- Docker -->
-                    <div class="skill-card reveal hover-lift bg-gray-50 dark:bg-gray-700 p-6 rounded-xl">
-                        <div class="flex items-center mb-4">
-                            <img src="https://www.vectorlogo.zone/logos/docker/docker-icon.svg" alt="Docker"
-                                class="w-8 h-8 mr-3">
-                            <h3 class="text-lg font-semibold text-gray-800 dark:text-white">Docker</h3>
-                        </div>
-                        <div class="skill-bar mb-2">
-                            <div class="skill-fill" data-width="75%"></div>
-                        </div>
-                        <p class="text-sm text-gray-600 dark:text-gray-300">Containerization</p>
-                    </div>
-
-                    <!-- Kubernetes -->
-                    <div class="skill-card reveal hover-lift bg-gray-50 dark:bg-gray-700 p-6 rounded-xl">
-                        <div class="flex items-center mb-4">
-                            <img src="https://www.vectorlogo.zone/logos/kubernetes/kubernetes-icon.svg" alt="Kubernetes"
-                                class="w-8 h-8 mr-3">
-                            <h3 class="text-lg font-semibold text-gray-800 dark:text-white">Kubernetes</h3>
-                        </div>
-                        <div class="skill-bar mb-2">
-                            <div class="skill-fill" data-width="70%"></div>
-                        </div>
-                        <p class="text-sm text-gray-600 dark:text-gray-300">Container Orchestration</p>
-                    </div>
-                </div>
+        <!-- GitLite -->
+        <div class="project-card reveal reveal-delay-2 hover-lift">
+          <div class="project-thumb">
+            <img src="resources/gitlite.jpg"
+                 alt="GitLite File Manager" loading="lazy"
+                 onerror="this.src='https://images.unsplash.com/photo-1556075798-4825dfaaf498?auto=format&fit=crop&w=800&q=80'" />
+          </div>
+          <div class="card-body">
+            <h3>GitLite – File Management</h3>
+            <p>A GitHub-inspired file management platform with secure auth, file uploads, and cloud deployment via FastAPI &amp; PostgreSQL.</p>
+            <div class="tag-list">
+              <span class="tag">FastAPI</span>
+              <span class="tag green">PostgreSQL</span>
+              <span class="tag purple">Docker</span>
+              <span class="tag gray">DevOps</span>
             </div>
-        </section>
+            <a href="https://hemal9102.github.io/GitLite/" class="card-link" target="_blank" rel="noopener">
+              View Project →
+            </a>
+          </div>
+        </div>
 
-        <!-- Projects Section -->
-        <section id="projects" class="py-20 bg-white dark:bg-gray-800">
-            <div class="max-w-6xl mx-auto px-6">
-                <div class="text-center mb-16 reveal">
-                    <h2 class="text-4xl font-bold text-gray-800 dark:text-white mb-4">
-                        Featured <span class="gradient-text">Projects</span>
-                    </h2>
-                    <p class="text-xl text-gray-600 dark:text-gray-300">
-                        Explore my latest work in AI, automation, and web development
-                    </p>
-                </div>
+      </div>
 
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Chess AI Project -->
-                    <div
-                        class="project-card reveal hover-lift bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg">
-                        <img src="data:image/jpeg;base64,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"
-                            alt="Chess AI Project" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Chess AI Engine</h3>
-                            <p class="text-gray-600 dark:text-gray-300 mb-4">Advanced chess engine using minimax
-                                algorithm
-                                with alpha-beta pruning and neural network evaluation.</p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span
-                                    class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">Python</span>
-                                <span
-                                    class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm">AI/ML</span>
-                                <span
-                                    class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm">Pygame</span>
-                            </div>
-                            <a href="https://github.com/hemal9102/ChessAI-Glasses"
-                                class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-semibold">View
-                                Project →</a>
-                        </div>
-                    </div>
+      <div class="text-center" style="margin-top:2.5rem;">
+        <a href="work.html" class="cta-button outline">View All Projects →</a>
+      </div>
+    </div>
+  </section>
 
-                    <!-- n8n OCR Bot -->
-                    <div
-                        class="project-card reveal hover-lift bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
-                            alt="n8n OCR Telegram Bot" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">n8n OCR Telegram Bot
-                            </h3>
-                            <p class="text-gray-600 dark:text-gray-300 mb-4">Automated Telegram bot that extracts text
-                                from
-                                images using OCR and n8n workflow automation.</p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span
-                                    class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">n8n</span>
-                                <span
-                                    class="px-3 py-1 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 rounded-full text-sm">OCR</span>
-                                <span
-                                    class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm">Telegram</span>
-                            </div>
-                            <a href="#"
-                                class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-semibold">View
-                                Project →</a>
-                        </div>
-                    </div>
+  <!-- ── CTA / Contact Banner ───────────────── -->
+  <section class="section" style="background:linear-gradient(135deg,rgba(59,130,246,0.12),rgba(139,92,246,0.12));">
+    <div class="section-inner text-center">
+      <h2 class="section-title reveal" style="font-size:clamp(1.8rem,4vw,2.5rem);font-weight:700;color:#fff;margin-bottom:1rem;">
+        Let's Build Something <span class="gradient-text">Together</span>
+      </h2>
+      <p class="reveal reveal-delay-1" style="color:var(--color-text-muted);font-size:1.1rem;max-width:520px;margin:0 auto 2rem;">
+        Have a project in mind? I'd love to hear about it. Let's collaborate and turn ideas into reality.
+      </p>
+      <div class="hero-buttons reveal reveal-delay-2">
+        <a href="contact.html" class="cta-button primary">Get In Touch</a>
+        <a href="mailto:hemal.shah2004@gmail.com" class="cta-button secondary">hemal.shah2004@gmail.com</a>
+      </div>
+    </div>
+  </section>
 
-                    <!-- Web Scraper -->
-                    <div
-                        class="project-card reveal hover-lift bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg">
-                        <img src="https://images.unsplash.com/photo-1556075798-4825dfaaf498?auto=format&fit=crop&w=1170&q=80"
-                            alt="GitLite File Manager" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">
-                                GitLite – File Management System
-                            </h3>
-                            <p class="text-gray-600 dark:text-gray-300 mb-4">
-                                A GitHub-inspired file management platform with secure user authentication, file
-                                uploads,
-                                user-specific storage, and cloud deployment using FastAPI and PostgreSQL.
-                            </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span
-                                    class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">
-                                    FastAPI
-                                </span>
-                                <span
-                                    class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm">
-                                    PostgreSQL
-                                </span>
-                                <span
-                                    class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm">
-                                    Docker
-                                </span>
-                                <span
-                                    class="px-3 py-1 bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 rounded-full text-sm">
-                                    DevOps
-                                </span>
-                            </div>
-                            <a href="https://hemal9102.github.io/GitLite/"
-                                class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-semibold">
-                                View Project →
-                            </a>
-                        </div>
-                    </div>
+  <!-- ── Site Footer ────────────────────────── -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><img src="assets/favicon.png" alt="SpringSummer" class="logo-img" /></a>
+        <p>Automation Engineer · Python Developer · Full-stack Developer</p>
+      </div>
 
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="services.html">Skills</a></li>
+          <li><a href="blogs.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
 
-                    <!-- <div class="text-center mt-12 reveal">
-                    <a href="#"
-                        class="hover-lift bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold inline-block">
-                        View All Projects
-                    </a>
-                </div> -->
-                </div>
-        </section>
+      <div class="footer-social">
+        <h4>Connect</h4>
+        <div class="social-row">
+          <a class="social-btn" href="https://github.com/hemal9102" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.79-.26.79-.58v-2.23c-3.34.73-4.03-1.42-4.03-1.42-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.49 1 .11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.19.69.8.58A12 12 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a class="social-btn" href="https://www.linkedin.com/in/hemal-shah-49a728362/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zm1.78 13.02H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.73V1.73C24 .77 23.21 0 22.23 0z"/></svg>
+          </a>
+          <a class="social-btn" href="https://www.instagram.com/hemall_9/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zm4.25 3.25a5.25 5.25 0 1 1 0 10.5 5.25 5.25 0 0 1 0-10.5zm0 1.5a3.75 3.75 0 1 0 0 7.5 3.75 3.75 0 0 0 0-7.5zm5.75-.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg>
+          </a>
+          <a class="social-btn" href="https://www.youtube.com/@HK_mixedits" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M23.5 6.2s-.2-1.7-.9-2.5a3.3 3.3 0 0 0-2.3-.9C17 2.5 12 2.5 12 2.5s-5 0-8.3.3a3.3 3.3 0 0 0-2.3.9C.7 4.5.5 6.2.5 6.2S0 8.2 0 10.2v1.6c0 2 .5 4 5.2 4.3 3.3.3 6.8.3 6.8.3s5 0 8.3-.3c2.3-.2 3.2-1.5 3.5-2.4.3-.9.5-2.5.5-2.5s.2-1.7.2-3.7V10c0-2-.2-3.8-.2-3.8z"/><polygon fill="#fff" points="9.5,8 15.5,12 9.5,16"/></svg>
+          </a>
+          <a class="social-btn" href="mailto:hemal.shah2004@gmail.com" aria-label="Email">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
 
-        <!-- Call to Action Section -->
-        <!-- <section class="py-20 bg-blue-600 dark:bg-blue-800">
-            <div class="max-w-4xl mx-auto px-6 text-center">
-                <div class="reveal">
-                    <h2 class="text-4xl font-bold text-white mb-6">
-                        Contact for Collaboration
-                    </h2>
-                    <p class="text-xl text-blue-100 mb-8">
-                        Let's work together to make your ideas a reality!
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="mailto:hemal.shah2004@gmail.com"
-                            class="hover-lift bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold">
-                            Get In Touch
-                        </a>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Hemal Shah · SpringSummer Portfolio. Built with passion and code.</p>
+    </div>
+  </footer>
 
-                    </div>
-                </div>
-            </div>
-        </section> -->
-
-        <!-- Footer -->
-
-        <footer id="contact" class="bg-gray-900 dark:bg-black text-white py-12">
-            <div class="max-w-6xl mx-auto px-6">
-                <div class="text-center">
-                    <div class="text-3xl font-bold mb-4">
-                        HS<span class="gradient-text">.</span>
-                    </div>
-                    <p class="text-gray-400 mb-6">
-                        Automation Engineer • Python Developer • Full-stack Developer
-                    </p>
-                    <div class="flex justify-center space-x-6 mb-8">
-                        <a href="https://github.com/hemal9102" target="_blank"
-                            class="text-gray-400 hover:text-white transition-colors duration-200">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                <path
-                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 10.92.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                            </svg>
-                        </a>
-                        <a href="https://www.linkedin.com/in/hemal-shah-49a728362/" target="_blank"
-                            class="text-gray-400 hover:text-white transition-colors duration-200">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                <path
-                                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                            </svg>
-                        </a>
-                        <a href="mailto:hemal.shah2004@gmail.com"
-                            class="text-gray-400 hover:text-white transition-colors duration-200">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                        </a>
-                    </div>
-                    <div class="border-t border-gray-800 pt-8">
-                        <p class="text-gray-400 text-sm">
-                            © 2025 Hemal Shah. All rights reserved. Built with passion and code.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </footer>
-
-        <!-- JavaScript -->
-        <script src="assets/js/main.js"></script>
-        <script src="assets/js/index_animations.js"></script>
-    </div> <!-- /.content-with-sidebar -->
+  <!-- Scripts -->
+  <script src="script.js"></script>
 </body>
-
 </html>
