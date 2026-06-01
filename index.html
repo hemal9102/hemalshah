@@ -54,6 +54,11 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Photo-less featured project cards */
+    #projects .project-card .card-body { padding: 1.6rem 1.5rem 1.5rem; }
+    #projects .project-card .card-body h3 { font-size: 1.15rem; margin: 0 0 0.6rem; }
+  </style>
 </head>
 <body>
   <!-- 3D Animation: Scroll Progress & Cursor Glow -->
@@ -242,7 +247,7 @@
 
         <div class="skill-card reveal hover-lift">
           <div class="skill-card-header">
-            <img src="https://kimi-web-img.moonshot.cn/img/1.bp.blogspot.com/8c36a2826c55d1ed8322b8f4b5d30d95fb3923fc.png" alt="Python" />
+            <img src="https://www.vectorlogo.zone/logos/python/python-icon.svg" alt="Python" />
             <h3>Python</h3>
           </div>
           <div class="skill-bar"><div class="skill-fill" data-width="95%"></div></div>
@@ -339,63 +344,50 @@
 
       <div class="projects-grid">
 
-        <!-- Chess AI -->
+        <!-- Crawler – Web Scraper Platform -->
         <div class="project-card reveal hover-lift">
-          <div class="project-thumb">
-            <img src="https://images.unsplash.com/photo-1586165368502-1bad197a6461?auto=format&fit=crop&w=800&q=80"
-                 alt="Chess AI Engine" loading="lazy" />
-          </div>
           <div class="card-body">
-            <h3>Chess AI Engine</h3>
-            <p>Advanced chess engine using minimax algorithm with alpha-beta pruning and neural network evaluation.</p>
+            <h3>Crawler – Data Intelligence Platform</h3>
+            <p>An adaptive lead-generation platform that scrapes business data from Google Maps and the web using Playwright, with real-time progress and a searchable database.</p>
             <div class="tag-list">
               <span class="tag">Python</span>
-              <span class="tag green">AI / ML</span>
-              <span class="tag purple">Pygame</span>
+              <span class="tag">Playwright</span>
+              <span class="tag green">Supabase</span>
             </div>
-            <a href="https://github.com/hemal9102/ChessAI-Glasses" class="card-link" target="_blank" rel="noopener">
-              View Project →
+            <a href="https://scraper-o801.onrender.com/" class="card-link" target="_blank" rel="noopener">
+              View Live →
             </a>
           </div>
         </div>
 
-        <!-- n8n OCR Bot -->
+        <!-- AI Review Generator -->
         <div class="project-card reveal reveal-delay-1 hover-lift">
-          <div class="project-thumb">
-            <img src="resources/ocr.jpg"
-                 alt="n8n OCR Telegram Bot" loading="lazy"
-                 onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80'" />
-          </div>
           <div class="card-body">
-            <h3>n8n OCR Telegram Bot</h3>
-            <p>Automated Telegram bot that extracts text from images using OCR and n8n workflow automation.</p>
+            <h3>AI Review Reply Generator</h3>
+            <p>Pulls business data via the Google Places API and uses an LLM to write professional replies to customer reviews for local businesses.</p>
             <div class="tag-list">
-              <span class="tag">n8n</span>
-              <span class="tag orange">OCR</span>
-              <span class="tag green">Telegram</span>
+              <span class="tag green">LLM</span>
+              <span class="tag">Google Places API</span>
+              <span class="tag orange">AI / ML</span>
             </div>
-            <a href="work.html#ocr-bot" class="card-link">View Project →</a>
+            <a href="https://review.inddigmedia.in/" class="card-link" target="_blank" rel="noopener">
+              View Live →
+            </a>
           </div>
         </div>
 
-        <!-- GitLite -->
+        <!-- Appointment Scheduler -->
         <div class="project-card reveal reveal-delay-2 hover-lift">
-          <div class="project-thumb">
-            <img src="resources/gitlite.jpg"
-                 alt="GitLite File Manager" loading="lazy"
-                 onerror="this.src='https://images.unsplash.com/photo-1556075798-4825dfaaf498?auto=format&fit=crop&w=800&q=80'" />
-          </div>
           <div class="card-body">
-            <h3>GitLite – File Management</h3>
-            <p>A GitHub-inspired file management platform with secure auth, file uploads, and cloud deployment via FastAPI &amp; PostgreSQL.</p>
+            <h3>Doctor Appointment Scheduler</h3>
+            <p>Books doctor–patient appointments straight into Google Calendar, with AiSensy-powered WhatsApp confirmations and automated reminders.</p>
             <div class="tag-list">
-              <span class="tag">FastAPI</span>
-              <span class="tag green">PostgreSQL</span>
-              <span class="tag purple">Docker</span>
-              <span class="tag gray">DevOps</span>
+              <span class="tag">Google Calendar API</span>
+              <span class="tag green">AiSensy</span>
+              <span class="tag purple">Automation</span>
             </div>
-            <a href="https://hemal9102.github.io/GitLite/" class="card-link" target="_blank" rel="noopener">
-              View Project →
+            <a href="https://app.makeappointments.in/#/doctor-register" class="card-link" target="_blank" rel="noopener">
+              View Live →
             </a>
           </div>
         </div>

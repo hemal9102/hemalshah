@@ -45,6 +45,15 @@
     .status-live   { background: rgba(34,197,94,0.15);  color: #86efac; border: 1px solid rgba(34,197,94,0.25); }
     .status-github { background: rgba(148,163,184,0.1);  color: #cbd5e1; border: 1px solid rgba(148,163,184,0.2); }
     .status-wip    { background: rgba(250,204,21,0.12);  color: #fde68a; border: 1px solid rgba(250,204,21,0.2); }
+
+    /* Photo-less project cards */
+    .project-card .card-body {
+      padding: 1.6rem 1.5rem 1.5rem;
+    }
+    .project-card .card-body h3 {
+      font-size: 1.15rem;
+      margin: 0 0 0.6rem;
+    }
   </style>
 </head>
 <body>
@@ -121,12 +130,94 @@
 
       <div class="projects-grid" id="projects-grid">
 
-        <!-- Chess AI -->
-        <div class="project-card reveal hover-lift" data-tags="ai game">
-          <div class="project-thumb">
-            <img src="https://images.unsplash.com/photo-1586165368502-1bad197a6461?auto=format&fit=crop&w=800&q=80"
-                 alt="Chess AI Engine" loading="lazy" />
+        <!-- Crawler – Web Scraper Platform -->
+        <div class="project-card reveal hover-lift" data-tags="automation ai web">
+          <div class="card-body">
+            <span class="project-status status-live">Live</span>
+            <h3>Crawler – Data Intelligence Platform</h3>
+            <p>An adaptive lead-generation platform that scrapes business data from Google Maps and the web using Playwright, with real-time progress, deduplication, and a searchable database of scraped businesses.</p>
+            <div class="tag-list">
+              <span class="tag">Python</span>
+              <span class="tag">Playwright</span>
+              <span class="tag green">Supabase</span>
+              <span class="tag orange">Automation</span>
+            </div>
+            <a href="https://scraper-o801.onrender.com/" class="card-link" target="_blank" rel="noopener">
+              View Live →
+            </a>
           </div>
+        </div>
+
+        <!-- SEO Landing Pages -->
+        <div class="project-card reveal reveal-delay-1 hover-lift" data-tags="web">
+          <div class="card-body">
+            <span class="project-status status-live">Live</span>
+            <h3>SEO-Optimized Landing Pages</h3>
+            <p>A high-conversion, SEO-optimized landing webpage built for the company — fast, responsive, and structured for search visibility and lead capture.</p>
+            <div class="tag-list">
+              <span class="tag">HTML / CSS</span>
+              <span class="tag green">SEO</span>
+              <span class="tag purple">Web Dev</span>
+            </div>
+            <a href="https://landingpages.inddigmedia.in/" class="card-link" target="_blank" rel="noopener">
+              View Live →
+            </a>
+          </div>
+        </div>
+
+        <!-- AI Review Generator -->
+        <div class="project-card reveal reveal-delay-2 hover-lift" data-tags="ai web">
+          <div class="card-body">
+            <span class="project-status status-live">Live</span>
+            <h3>AI Review Reply Generator</h3>
+            <p>A review-response tool that pulls business information via the Google Places API and uses an LLM to write professional, on-brand replies to customer reviews for local businesses.</p>
+            <div class="tag-list">
+              <span class="tag green">LLM</span>
+              <span class="tag">Google Places API</span>
+              <span class="tag orange">AI / ML</span>
+            </div>
+            <a href="https://review.inddigmedia.in/" class="card-link" target="_blank" rel="noopener">
+              View Live →
+            </a>
+          </div>
+        </div>
+
+        <!-- SEO Rank Checker -->
+        <div class="project-card reveal hover-lift" data-tags="web automation">
+          <div class="card-body">
+            <span class="project-status status-live">Live</span>
+            <h3>Business Rank Checker</h3>
+            <p>A SEO rank-tracking tool using the SERP API and Google Places API, letting clients check how their business ranks for targeted SEO keywords.</p>
+            <div class="tag-list">
+              <span class="tag">SERP API</span>
+              <span class="tag">Google Places API</span>
+              <span class="tag green">SEO</span>
+            </div>
+            <a href="https://inddigrankchecker.in/" class="card-link" target="_blank" rel="noopener">
+              View Live →
+            </a>
+          </div>
+        </div>
+
+        <!-- Appointment Scheduler -->
+        <div class="project-card reveal reveal-delay-1 hover-lift" data-tags="ai automation web">
+          <div class="card-body">
+            <span class="project-status status-live">Live</span>
+            <h3>Doctor Appointment Scheduler</h3>
+            <p>An appointment management system for doctors and patients that books appointments straight into Google Calendar, with AiSensy-powered WhatsApp confirmations and automated reminders.</p>
+            <div class="tag-list">
+              <span class="tag">Google Calendar API</span>
+              <span class="tag green">AiSensy</span>
+              <span class="tag orange">Automation</span>
+            </div>
+            <a href="https://app.makeappointments.in/#/doctor-register" class="card-link" target="_blank" rel="noopener">
+              View Live →
+            </a>
+          </div>
+        </div>
+
+        <!-- Chess AI -->
+        <div class="project-card reveal reveal-delay-2 hover-lift" data-tags="ai game">
           <div class="card-body">
             <span class="project-status status-github">GitHub</span>
             <h3>Chess AI Engine</h3>
@@ -144,12 +235,7 @@
         </div>
 
         <!-- n8n OCR Bot -->
-        <div class="project-card reveal reveal-delay-1 hover-lift" id="ocr-bot" data-tags="automation ai">
-          <div class="project-thumb">
-            <img src="resources/ocr.jpg"
-                 alt="n8n OCR Telegram Bot" loading="lazy"
-                 onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80'" />
-          </div>
+        <div class="project-card reveal hover-lift" id="ocr-bot" data-tags="automation ai">
           <div class="card-body">
             <span class="project-status status-live">Live</span>
             <h3>n8n OCR Telegram Bot</h3>
@@ -165,12 +251,7 @@
         </div>
 
         <!-- GitLite -->
-        <div class="project-card reveal reveal-delay-2 hover-lift" data-tags="web">
-          <div class="project-thumb">
-            <img src="resources/gitlite.jpg"
-                 alt="GitLite File Manager" loading="lazy"
-                 onerror="this.src='https://images.unsplash.com/photo-1556075798-4825dfaaf498?auto=format&fit=crop&w=800&q=80'" />
-          </div>
+        <div class="project-card reveal reveal-delay-1 hover-lift" data-tags="web">
           <div class="card-body">
             <span class="project-status status-live">Live</span>
             <h3>GitLite – File Management System</h3>
@@ -188,11 +269,7 @@
         </div>
 
         <!-- Automation Workflow -->
-        <div class="project-card reveal hover-lift" data-tags="automation">
-          <div class="project-thumb">
-            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"
-                 alt="Workflow Automation" loading="lazy" />
-          </div>
+        <div class="project-card reveal reveal-delay-2 hover-lift" data-tags="automation">
           <div class="card-body">
             <span class="project-status status-wip">In Progress</span>
             <h3>Multi-Agent Automation Pipeline</h3>
@@ -208,11 +285,7 @@
         </div>
 
         <!-- Computer Vision -->
-        <div class="project-card reveal reveal-delay-1 hover-lift" data-tags="ai">
-          <div class="project-thumb">
-            <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80"
-                 alt="Computer Vision" loading="lazy" />
-          </div>
+        <div class="project-card reveal hover-lift" data-tags="ai">
           <div class="card-body">
             <span class="project-status status-github">GitHub</span>
             <h3>Real-Time Object Detection</h3>
@@ -229,12 +302,8 @@
           </div>
         </div>
 
-        <!-- Web Scraper -->
-        <div class="project-card reveal reveal-delay-2 hover-lift" data-tags="automation web">
-          <div class="project-thumb">
-            <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=800&q=80"
-                 alt="Web Scraper" loading="lazy" />
-          </div>
+        <!-- Web Scraper (GitHub) -->
+        <div class="project-card reveal reveal-delay-1 hover-lift" data-tags="automation web">
           <div class="card-body">
             <span class="project-status status-github">GitHub</span>
             <h3>Intelligent Web Scraper</h3>
