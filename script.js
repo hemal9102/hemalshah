@@ -1,5 +1,5 @@
 /* ============================================
-   SpringSummer Portfolio — Main JavaScript
+   HK Engineering — Main JavaScript
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', function () {
