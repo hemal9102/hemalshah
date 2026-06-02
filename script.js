@@ -305,23 +305,63 @@ function initContactForm() {
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
+
+    // Quick validation
+    const nameInput = document.getElementById('cf-name');
+    const emailInput = document.getElementById('cf-email');
+    const messageInput = document.getElementById('cf-message');
+
+    if (!nameInput || !emailInput || !messageInput) return;
+
+    if (!nameInput.value.trim() || !emailInput.value.trim() || !messageInput.value.trim()) {
+      showToast('Please fill out all required fields.', 'error');
+      return;
+    }
+
     const btn = form.querySelector('[type="submit"]');
+    const originalText = btn.innerHTML;
     btn.disabled = true;
     btn.textContent = 'Sending…';
 
-    // Simulate async send
-    setTimeout(() => {
-      btn.textContent = 'Send Message';
-      btn.disabled = false;
-      form.reset();
-      showToast('Message sent! I\'ll get back to you soon.', 'success');
+    const formData = {
+      name: nameInput.value,
+      email: emailInput.value,
+      subject: document.getElementById('cf-subject')?.value || 'General Inquiry',
+      project_type: document.getElementById('cf-type')?.value || 'Other',
+      message: messageInput.value
+    };
 
-      const successEl = document.getElementById('form-success');
-      if (successEl) {
-        successEl.style.display = 'block';
-        setTimeout(() => { successEl.style.display = 'none'; }, 5000);
+    fetch('https://formsubmit.co/ajax/hemal.shah2004@gmail.com', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    })
+    .then(response => response.json())
+    .then(data => {
+      btn.innerHTML = originalText;
+      btn.disabled = false;
+
+      if (data.success === "true" || data.success === true) {
+        form.reset();
+        showToast('Message sent! I\'ll get back to you soon.', 'success');
+        const successEl = document.getElementById('form-success');
+        if (successEl) {
+          successEl.style.display = 'block';
+          setTimeout(() => { successEl.style.display = 'none'; }, 5000);
+        }
+      } else {
+        showToast('Oops! Something went wrong. Please try again.', 'error');
       }
-    }, 1800);
+    })
+    .catch(error => {
+      btn.innerHTML = originalText;
+      btn.disabled = false;
+      showToast('Connection error. Please check your network.', 'error');
+      console.error('Error submitting form:', error);
+    });
   });
 }
 
