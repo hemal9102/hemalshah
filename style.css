@@ -142,6 +142,22 @@ img { max-width: 100%; display: block; }
   background: rgba(255,255,255,0.08);
 }
 
+.nav-cta {
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6) !important;
+  color: #fff !important;
+  font-weight: 600 !important;
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.4rem 1.1rem !important;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease !important;
+}
+.nav-cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.6) !important;
+  filter: brightness(1.1);
+}
+
 /* ── Mobile Nav Toggle ──────────────────────── */
 .nav-toggle {
   display: none;
