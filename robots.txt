@@ -1,0 +1,13 @@
+# Robots.txt for Hemal Shah's Portfolio
+# Optimized for Search Engines (SEO) and Generative Engines (GEO / LLM Crawlers)
+
+User-agent: *
+Allow: /
+
+# Direct links to AI-optimized portfolio metadata
+Disallow: /assets/
+Disallow: /node_modules/
+
+# Sitemaps and AI specifications
+Sitemap: https://hemal9102.github.io/hemalshah/sitemap.xml
+llms-txt: https://hemal9102.github.io/hemalshah/llms.txt

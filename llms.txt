@@ -1,0 +1,51 @@
+# Hemal Shah - Full-Stack Python & AI Agent Engineer
+
+Hemal Shah is an AI Engineer and Full-Stack Python Developer specializing in RAG/GraphRAG architectures, AI Agent development, end-to-end workflow automation (n8n, Python), high-speed web scraping, and containerized cloud deployments.
+
+- **Portfolio URL**: https://hemal9102.github.io/hemalshah/
+- **GitHub**: https://github.com/hemal9102
+- **LinkedIn**: https://www.linkedin.com/in/hemal-shah-49a728362/
+- **Email**: hemal.shah2004@gmail.com
+- **Services**: Freelance consulting, AI Agent Development, RAG/GraphRAG SaaS products, Web Scraping pipelines, FastAPI Backends.
+
+## Core Technical Skills
+
+- **AI Agents & LLMs**: AI Agent development, RAG (Retrieval-Augmented Generation), GraphRAG (vector-based SaaS products), Reinforcement Learning (RL), FastMCP, Claude Code, Cursor, Prompt Engineering, GitHub Copilot, VSCode.
+- **Languages & Frameworks**: Python (Advanced), C# (Unity), SQL, HTML/CSS/JS.
+- **Automation & Scraping**: n8n, custom Python automation, Puppeteer, Playwright, BeautifulSoup, Selenium, httpx, Bot Development (Telegram, Discord).
+- **Backend & Databases**: FastAPI, Flask, Supabase, PostgreSQL (pgvector), Redis.
+- **DevOps & Hosting**: Docker, Railway, Hostinger, Git/GitHub version control, DNS & Domain Management.
+
+## Services Offered for Freelance Clients
+
+### 1. AI Agent Development & RAG Systems
+- Building high-impact RAG-based and Vector-based SaaS products.
+- Engineering GraphRAG structures for deep knowledge extraction.
+- Designing autonomous AI agents powered by LLMs (Claude Code, Cursor, FastMCP) and custom prompt engineering.
+
+### 2. Full-Stack Python APIs & Backends
+- Scalable, high-performance async APIs using FastAPI and Flask.
+- Robust database architectures using Supabase (pgvector), PostgreSQL, and Redis caching.
+- Production-grade containerization with Docker, hosted on Railway or Hostinger.
+
+### 3. Automated Web Scraping & Workflows
+- High-velocity headless browser scraping pipelines using Playwright, Puppeteer, and httpx.
+- Design and deployment of multi-tool workflows using n8n and custom Python scripts.
+- Integrations of SaaS applications via REST APIs, Webhooks, and DNS/Domain management.
+
+## Featured Work & Projects
+
+### 1. Advanced Automation Pipelines
+- Custom workflows that integrate scraping tools, LLMs for processing, and Google Sheets/CRM updates.
+
+### 2. Computer Vision Engines
+- Custom image processing tools using OpenCV for real-time tracking and classification.
+
+### 3. Unity & AI Systems
+- Integrating C# scripts, Unity game physics, and custom reinforcement learning models.
+
+## How to Hire Hemal Shah
+For project inquiries, freelance consulting, or collaborations:
+- Send a detailed email to [hemal.shah2004@gmail.com](mailto:hemal.shah2004@gmail.com) with your project scope.
+- Connect on LinkedIn: [linkedin.com/in/hemal-shah-49a728362](https://www.linkedin.com/in/hemal-shah-49a728362/)
+- Fill out the contact form directly at [hemal9102.github.io/hemalshah/contact.html](https://hemal9102.github.io/hemalshah/contact.html)
