@@ -3,23 +3,31 @@
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', function () {
-  initMobileNav();
-  initScrollHeader();
-  initReveal();
-  initSkillBars();
-  initSmoothScroll();
-  initParticles();
-  initTypewriter();
-  initContactForm();
-  initDockHighlight();
+  const safeInit = (name, initFn) => {
+    try {
+      if (typeof initFn === 'function') initFn();
+    } catch (err) {
+      console.warn(`[SafeInit] Failed to load ${name}:`, err);
+    }
+  };
+
+  safeInit('initMobileNav', initMobileNav);
+  safeInit('initScrollHeader', initScrollHeader);
+  safeInit('initReveal', initReveal);
+  safeInit('initSkillBars', initSkillBars);
+  safeInit('initSmoothScroll', initSmoothScroll);
+  safeInit('initParticles', initParticles);
+  safeInit('initTypewriter', initTypewriter);
+  safeInit('initContactForm', initContactForm);
+  safeInit('initDockHighlight', initDockHighlight);
   /* 3D Animation System */
-  initScrollProgress();
-  initCursorGlow();
-  initTiltCards();
-  initMagneticDock();
-  initParallaxHero();
-  initRippleButtons();
-  initPageTransition();
+  safeInit('initScrollProgress', initScrollProgress);
+  safeInit('initCursorGlow', initCursorGlow);
+  safeInit('initTiltCards', initTiltCards);
+  safeInit('initMagneticDock', initMagneticDock);
+  safeInit('initParallaxHero', initParallaxHero);
+  safeInit('initRippleButtons', initRippleButtons);
+  safeInit('initPageTransition', initPageTransition);
 });
 
 /* ── Mobile Navigation ──────────────────────── */
