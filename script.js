@@ -263,10 +263,12 @@ function initTypewriter() {
   if (!el) return;
 
   const strings = [
-    'Automation Engineer',
-    'Full Stack Developer',
-    'Python Developer',
-    'Problem Solver'
+    'AI Agent & Full-Stack Python Engineer',
+    'RAG & GraphRAG Architect',
+    'n8n Workflow Automation Specialist',
+    'Founder of HK Engineering',
+    'Co-Founder of CreativeIQ',
+    'SaaS, Automation & Digital Growth Expert'
   ];
 
   if (typeof Typed !== 'undefined') {
