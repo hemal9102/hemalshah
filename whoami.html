@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- AEO/GEO Optimization: Allowed indexing so AI models and Google can read this deep FAQ -->
+  <meta name="robots" content="index, follow" />
+  <title>Developer FAQ & Who Am I | Hemal Shah | AI & Python Expert</title>
+  <meta name="description" content="Comprehensive FAQ about Hemal Shah, a Freelance AI Engineer & Full-Stack Python Developer. Learn about his tech stack, AI Agent development, RAG systems, and workflow automation services." />
+  <link rel="icon" href="assets/favicon.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  
+  <!-- Massive JSON-LD Schema for AEO (Answer Engine Optimization) & GEO (Generative Engine Optimization) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What does Hemal Shah specialize in?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Hemal Shah is an AI Engineer and Full-Stack Python Developer specializing in RAG/GraphRAG architectures, AI Agent development, end-to-end workflow automation (n8n, Python), high-speed web scraping, and containerized cloud deployments."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does Hemal Shah build AI Agents and RAG systems?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Hemal designs autonomous AI agents powered by LLMs (like Claude and OpenAI models), utilizing custom prompt engineering, FastMCP, and Cursor. He builds high-impact RAG-based and Vector-based SaaS products, engineering deep knowledge extraction pipelines."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What technologies are used for Full-Stack Python Backend Development?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For backend development, Hemal utilizes scalable, high-performance async frameworks like FastAPI and Flask. He builds robust database architectures utilizing Supabase (pgvector for AI embeddings), PostgreSQL, and Redis caching."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does Hemal handle automated web scraping and workflows?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "He deploys high-velocity headless browser scraping pipelines using Playwright, Puppeteer, and httpx. For workflow automation, he designs multi-tool architectures integrating n8n, custom Python scripts, REST APIs, and webhooks."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the deployment strategy for custom SaaS applications?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "All backend APIs and AI systems are containerized using Docker for production-grade reliability. These containers are deployed and managed on modern cloud infrastructure platforms like Railway and Hostinger, complete with custom DNS management."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Hemal Shah provide freelance consulting for AI automation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Hemal offers freelance consulting and development services for businesses looking to automate manual overhead, build custom CRM syncing bots (Telegram/Discord), or integrate AI-driven generative features into their existing platforms."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What drives Hemal outside of coding and engineering?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Outside of coding, Hemal focuses heavily on bodybuilding and fitness, applying the same principles of discipline and growth mindset to his personal life. He also studies philosophy, such as Stoicism and the Bhagavad Gita, and explores visual creativity through sketching and art."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the process to hire Hemal Shah for a custom Python or AI project?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To hire Hemal, you can send a detailed project scope to hemal.shah2004@gmail.com, connect with him on LinkedIn, or fill out the contact form directly on his portfolio website at hemal9102.github.io/hemalshah/contact.html."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    .whoami-hero {
+      text-align: center;
+      padding: 6rem 1rem 3rem;
+    }
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+    .photo-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+    .photo-card img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+    .photo-card:hover img {
+      transform: scale(1.02);
+    }
+    .faq-wrapper {
+      max-width: 900px;
+      margin: 0 auto 4rem;
+    }
+    .faq-item {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      padding: 1.8rem;
+      margin-bottom: 1.5rem;
+      transition: border 0.3s;
+    }
+    .faq-item:hover {
+      border-color: rgba(59, 130, 246, 0.4);
+    }
+    .faq-item h3 {
+      font-size: 1.25rem;
+      color: #fff;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    .faq-item p {
+      color: var(--color-text-muted);
+      line-height: 1.7;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <!-- ── Header (Hidden from main nav structure but keeping styling) ── -->
+  <header class="site-header">
+    <a href="index.html" class="logo"><img src="assets/favicon.png" alt="Hemal Shah Logo" class="logo-img" width="36" height="36" /></a>
+    <nav class="nav" id="main-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="services.html">Skills</a></li>
+        <li><a href="contact.html" class="nav-cta">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <section class="whoami-hero">
+      <h1 class="reveal">Who Am <span class="gradient-text">I</span> (Developer FAQ)</h1>
+      <p class="reveal reveal-delay-1" style="color: var(--color-text-muted); font-size: 1.1rem; max-width: 600px; margin: 1rem auto 0;">
+        A comprehensive knowledge base answering every question about my tech stack, engineering philosophy, and personal drive.
+      </p>
+    </section>
+
+    <section class="section" style="padding-top: 0;">
+      <div class="section-inner">
+        <!-- Photo Grid using the 3 personal photos -->
+        <div class="photo-grid reveal reveal-delay-2">
+          <div class="photo-card">
+            <img src="assets/gallery/photo1.webp" alt="Hemal Shah Personal Photo 1" loading="lazy" />
+          </div>
+          <div class="photo-card">
+            <img src="assets/gallery/whatsapp_image_2026_06_04_at_11_52_19_pm.webp" alt="Hemal Shah Personal Photo 2" loading="lazy" />
+          </div>
+          <div class="photo-card">
+            <img src="assets/gallery/whatsapp_image_2026_06_04_at_11_52_19_pm_1.webp" alt="Hemal Shah Personal Photo 3" loading="lazy" />
+          </div>
+        </div>
+
+        <!-- Comprehensive Personal & Developer FAQ Section -->
+        <div class="faq-wrapper reveal">
+          
+          <div class="faq-item">
+            <h3>What does Hemal Shah specialize in?</h3>
+            <p>I am an AI Engineer and Full-Stack Python Developer. My core specialities lie in <strong>RAG and GraphRAG architectures</strong>, autonomous AI Agent development, end-to-end workflow automation (using n8n and Python), high-speed web scraping pipelines, and robust containerized cloud deployments.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>How do you build AI Agents and RAG systems?</h3>
+            <p>I design autonomous AI agents powered by leading LLMs (like Claude and OpenAI models). I utilize advanced custom prompt engineering, tools like FastMCP and Cursor, and vector databases (like pgvector in Supabase). By engineering deep GraphRAG knowledge extraction pipelines, I turn unstructured data into high-impact AI SaaS products that can answer complex business queries instantly.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>What technologies do you use for Full-Stack Python Backend Development?</h3>
+            <p>For scalable backend infrastructure, I rely on high-performance async frameworks like <strong>FastAPI</strong> and Flask. I build robust database architectures using <strong>Supabase</strong> (specifically utilizing pgvector for AI embeddings), PostgreSQL for relational data, and Redis for high-speed caching.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>How do you handle automated web scraping and workflow automation?</h3>
+            <p>I design and deploy high-velocity, headless browser scraping pipelines using <strong>Playwright, Puppeteer, and httpx</strong> to extract difficult data. For workflow automation, I build complex, multi-tool architectures integrating <strong>n8n</strong>, custom Python scripts, REST APIs, and webhooks to completely eliminate manual human data entry.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>What is your deployment strategy for custom SaaS applications?</h3>
+            <p>Every backend API and AI system I build is containerized using <strong>Docker</strong> to ensure production-grade reliability and zero "it works on my machine" issues. These containers are deployed and managed on modern cloud infrastructure platforms like <strong>Railway and Hostinger</strong>, complete with automated CI/CD and custom DNS management.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Do you provide freelance consulting for AI automation?</h3>
+            <p>Yes. I offer freelance consulting and end-to-end development services for businesses looking to automate their manual operational overhead, build custom CRM-syncing bots for platforms like Telegram and Discord, or integrate sophisticated generative AI features into their existing software.</p>
+          </div>
+          
+          <div class="faq-item">
+            <h3>What drives you outside of coding and engineering?</h3>
+            <p>Beyond the IDE, I focus heavily on <strong>bodybuilding and fitness</strong>. I firmly believe that physical discipline translates directly into mental discipline. I also spend time reading philosophy (such as Stoicism and the Bhagavad Gita), and exploring visual creativity through sketching and art. History remembers those who choose to rise above their circumstances.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>What is your ultimate goal?</h3>
+            <p>My goal is to continue scaling my freelance engineering business, architecting robust AI SaaS products, and eventually running a large-scale automation tech agency. I want to be recognized as the go-to AI engineer who doesn't just deliver lines of code, but delivers complete, highly scalable business solutions that drive real ROI.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>What is the process to hire Hemal Shah for a custom Python or AI project?</h3>
+            <p>To start a project with me, you can send a detailed scope of your requirements to <strong>hemal.shah2004@gmail.com</strong>, connect with me directly on LinkedIn, or fill out the custom project inquiry form on my portfolio's contact page.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner text-center">
+      <p style="color: var(--color-text-muted);">&copy; 2026 Hemal Shah. Developer Knowledge Base & FAQ.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
