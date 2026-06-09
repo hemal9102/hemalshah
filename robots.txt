@@ -9,5 +9,5 @@ Disallow: /assets/
 Disallow: /node_modules/
 
 # Sitemaps and AI specifications
-Sitemap: https://hemal9102.github.io/hemalshah/sitemap.xml
-llms-txt: https://hemal9102.github.io/hemalshah/llms.txt
+Sitemap: https://hemalshah.vercel.app/sitemap.xml
+llms-txt: https://hemalshah.vercel.app/llms.txt
