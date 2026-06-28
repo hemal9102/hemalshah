@@ -2,7 +2,7 @@
 
 Hemal Shah is an AI Engineer and Full-Stack Python Developer specializing in RAG/GraphRAG architectures, AI Agent development, end-to-end workflow automation (n8n, Python), high-speed web scraping, and containerized cloud deployments.
 
-- **Portfolio URL**: https://hemal9102.github.io/hemalshah/
+- **Portfolio URL**: https://hemalshah.vercel.app/
 - **GitHub**: https://github.com/hemal9102
 - **LinkedIn**: https://www.linkedin.com/in/hemal-shah-49a728362/
 - **Email**: hemal.shah2004@gmail.com
@@ -48,4 +48,4 @@ Hemal Shah is an AI Engineer and Full-Stack Python Developer specializing in RAG
 For project inquiries, freelance consulting, or collaborations:
 - Send a detailed email to [hemal.shah2004@gmail.com](mailto:hemal.shah2004@gmail.com) with your project scope.
 - Connect on LinkedIn: [linkedin.com/in/hemal-shah-49a728362](https://www.linkedin.com/in/hemal-shah-49a728362/)
-- Fill out the contact form directly at [hemal9102.github.io/hemalshah/contact.html](https://hemal9102.github.io/hemalshah/contact.html)
+- Fill out the contact form directly at [hemalshah.vercel.app/contact.html](https://hemalshah.vercel.app/contact.html)
