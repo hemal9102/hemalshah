@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Building AI Agents with FastAPI | Hemal Shah (HK)</title>
+  <meta name="description" content="A comprehensive technical guide on building scalable AI Agents using FastAPI, LLMs, and vector databases. Learn architecture, API design, and deployment by Hemal Shah (HK)." />
+  <meta name="keywords" content="AI Agents, FastAPI, Python Developer, Hemal Shah, HK, HK Engineering, LLM, RAG, Semantic SEO, Backend Architecture" />
+  <meta name="author" content="Hemal Shah (HK)" />
+  <link rel="canonical" href="https://hemalshah.vercel.app/blogs/ai-engineering/building-ai-agents-with-fastapi.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Building AI Agents with FastAPI | Hemal Shah" />
+  <meta property="og:description" content="Step-by-step guide to building scalable, asynchronous AI agents using FastAPI." />
+  <meta property="og:url" content="https://hemalshah.vercel.app/blogs/ai-engineering/building-ai-agents-with-fastapi.html" />
+
+  <!-- JSON-LD Article Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Building AI Agents with FastAPI",
+    "description": "A comprehensive technical guide on building scalable AI Agents using FastAPI, LLMs, and vector databases.",
+    "author": {
+      "@type": "Person",
+      "name": "Hemal Shah",
+      "alternateName": ["HK", "HK Engineering", "Hemal Shah HK"],
+      "url": "https://hemalshah.vercel.app/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "HK Engineering",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://hemalshah.vercel.app/assets/favicon.png"
+      }
+    },
+    "datePublished": "2026-06-29"
+  }
+  </script>
+
+  <!-- JSON-LD FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Why use FastAPI for AI Agents?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "FastAPI is asynchronous by default, meaning it can handle long-running LLM API calls without blocking other requests. It also provides automatic OpenAPI documentation which is essential for Tool Calling."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you manage memory in an AI Agent?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Memory is typically managed using Redis for short-term conversational context and a Vector Database (like Qdrant or Pinecone) for long-term semantic retrieval."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Favicon & Fonts -->
+  <link rel="icon" href="../../assets/favicon.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  
+  <!-- Prism.js for Syntax Highlighting -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="../../style.css" />
+  <style>
+    .blog-content { max-width: 850px; margin: 0 auto; padding: 2rem 1.5rem; color: #cbd5e1; line-height: 1.8; }
+    .blog-content h1 { color: #fff; font-size: 2.5rem; margin-bottom: 1rem; }
+    .blog-content h2 { color: #fff; font-size: 1.8rem; margin-top: 3rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .blog-content h3 { color: #e2e8f0; font-size: 1.4rem; margin-top: 2rem; margin-bottom: 1rem; }
+    .blog-content p { margin-bottom: 1.5rem; font-size: 1.05rem; }
+    .blog-content ul { margin-bottom: 1.5rem; padding-left: 1.5rem; }
+    .blog-content li { margin-bottom: 0.5rem; }
+    .blog-content pre { background: #0f172a; padding: 1.5rem; border-radius: 8px; overflow-x: auto; margin-bottom: 2rem; border: 1px solid rgba(255,255,255,0.1); }
+    .mermaid { background: rgba(255,255,255,0.02); padding: 1.5rem; border-radius: 8px; text-align: center; margin-bottom: 2rem; border: 1px solid rgba(255,255,255,0.05); }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 2rem; }
+    th, td { border: 1px solid rgba(255,255,255,0.1); padding: 1rem; text-align: left; }
+    th { background: rgba(255,255,255,0.05); color: #fff; font-weight: 600; }
+    .author-badge { display: flex; align-items: center; gap: 1rem; margin-bottom: 3rem; padding: 1rem; background: rgba(255,255,255,0.03); border-radius: 12px; }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <a href="../../index.html" class="logo"><img src="../../assets/favicon.png" alt="HK Engineering" class="logo-img" width="36" height="36" /></a>
+    <nav class="nav" id="main-nav">
+      <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../../about.html">About</a></li>
+        <li><a href="../../blogs.html" class="active">Blog</a></li>
+        <li><a href="../../contact.html" class="nav-cta">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Blog Content -->
+  <main class="blog-content" style="padding-top: 100px;">
+    
+    <div class="author-badge">
+      <img src="../../assets/favicon.png" width="50" style="border-radius: 50%;">
+      <div>
+        <strong style="color: #fff; display: block; font-size: 1.1rem;">Hemal Shah (HK)</strong>
+        <span style="font-size: 0.9rem; color: #94a3b8;">AI Automation Engineer & Technical SEO • Published June 29, 2026</span>
+      </div>
+    </div>
+
+    <h1>Building AI Agents with FastAPI: A Production Guide</h1>
+
+    <h2>1. The Problem</h2>
+    <p>Many developers start building AI agents using simple Python scripts or Jupyter Notebooks. However, when deploying these agents to production, they encounter significant bottlenecks: synchronous API calls blocking threads, poor state management, and difficulty integrating the agent with external webhooks (like Slack or n8n). Traditional frameworks like Flask or Django are often too heavy or lack native async support for these high-latency LLM workloads.</p>
+
+    <h2>2. Why It Matters</h2>
+    <p>Building AI agents with <strong>FastAPI</strong> solves these problems at the architectural level. FastAPI is asynchronous by default, meaning it can wait for an OpenAI or Anthropic API response without blocking other users. Furthermore, FastAPI's automatic OpenAPI (Swagger) generation makes it incredibly easy to define "Tools" that LLMs can call natively.</p>
+
+    <h2>3. Architecture Diagram</h2>
+    <div class="mermaid">
+    graph TD
+        Client[Client / Frontend] -->|HTTP POST| FastAPI[FastAPI Server]
+        FastAPI -->|Async Request| LLM[LLM Engine e.g. GPT-4 / Claude]
+        FastAPI -->|Store Context| Redis[(Redis Memory)]
+        LLM -.->|Tool Call| FastAPI
+        FastAPI -->|Execute Function| Tools[External Tools / DB]
+        Tools -.->|Result| FastAPI
+        FastAPI -.->|Final Answer| Client
+    </div>
+
+    <h2>4. Flow Diagram</h2>
+    <p>The sequence of operations when a user interacts with the API:</p>
+    <div class="mermaid">
+    sequenceDiagram
+        participant User
+        participant FastAPI
+        participant Memory
+        participant LLM
+        User->>FastAPI: POST /chat {message}
+        FastAPI->>Memory: Fetch History
+        FastAPI->>LLM: Send Message + History + Tools
+        LLM-->>FastAPI: ToolCall: fetch_data()
+        FastAPI->>FastAPI: Execute fetch_data()
+        FastAPI->>LLM: Return Tool Result
+        LLM-->>FastAPI: Final Text Response
+        FastAPI->>Memory: Save Interaction
+        FastAPI-->>User: JSON Response
+    </div>
+
+    <h2>5. Folder Structure</h2>
+    <pre><code class="language-bash">ai_agent_project/
+├── main.py              # FastAPI entry point
+├── config.py            # Environment variables
+├── agent/
+│   ├── core.py          # LLM connection & logic
+│   ├── memory.py        # Redis context manager
+│   └── tools.py         # Functions LLM can call
+├── models/
+│   └── schemas.py       # Pydantic data models
+└── requirements.txt</code></pre>
+
+    <h2>6. Implementation & Code Snippets</h2>
+    <p>Here is a minimal implementation of an async AI agent endpoint in FastAPI using Pydantic for validation.</p>
+
+    <h3>API Design (main.py)</h3>
+    <pre><code class="language-python">from fastapi import FastAPI, Depends
+from pydantic import BaseModel
+from agent.core import generate_agent_response
+
+app = FastAPI(title="HK Engineering AI Agent API")
+
+class ChatRequest(BaseModel):
+    user_id: str
+    message: str
+
+class ChatResponse(BaseModel):
+    reply: str
+    tokens_used: int
+
+@app.post("/api/chat", response_model=ChatResponse)
+async def chat_endpoint(request: ChatRequest):
+    # Async call to LLM prevents server blocking
+    response, tokens = await generate_agent_response(request.user_id, request.message)
+    return ChatResponse(reply=response, tokens_used=tokens)
+</code></pre>
+
+    <h2>7. Performance Comparison</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Framework</th>
+          <th>Async Support</th>
+          <th>Type Safety</th>
+          <th>LLM Tool Integration</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>FastAPI</td>
+          <td>Native (async/await)</td>
+          <td>Excellent (Pydantic)</td>
+          <td>Native via OpenAPI</td>
+        </tr>
+        <tr>
+          <td>Flask</td>
+          <td>Requires extensions</td>
+          <td>Manual validation</td>
+          <td>Requires custom wrappers</td>
+        </tr>
+        <tr>
+          <td>Django</td>
+          <td>Partial (ASGI)</td>
+          <td>Heavy (Django Forms)</td>
+          <td>Complex overhead</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>8. Security Considerations</h2>
+    <ul>
+      <li><strong>API Key Rotation:</strong> Never hardcode LLM keys. Use AWS Secrets Manager or .env.</li>
+      <li><strong>Rate Limiting:</strong> Use <code>slowapi</code> with FastAPI to prevent abuse, as LLM calls are expensive.</li>
+      <li><strong>Prompt Injection:</strong> Sanitize user inputs and use system prompt enclosures to prevent malicious instructions.</li>
+    </ul>
+
+    <h2>9. SEO & GEO Implications</h2>
+    <p>By exposing your AI agents via secure REST APIs, you can connect them to programmatic SEO pipelines. For example, an n8n workflow can trigger this FastAPI endpoint to generate high-quality, entity-rich content based on trending Google search queries.</p>
+
+    <h2>10. FAQ</h2>
+    <div style="background: rgba(255,255,255,0.03); padding: 1.5rem; border-radius: 8px;">
+      <h3 style="margin-top:0;">Why is FastAPI preferred over Flask for AI?</h3>
+      <p>Because LLM API calls take 1-10 seconds. In Flask, a single call blocks the worker thread. FastAPI uses ASGI, meaning it can process thousands of other requests while waiting for the LLM to respond.</p>
+      
+      <h3>Can I run local LLMs (like Ollama) with this architecture?</h3>
+      <p>Yes. Instead of pointing the async client to OpenAI, you simply change the base URL to <code>http://localhost:11434/v1</code> where Ollama is running.</p>
+    </div>
+
+  </main>
+
+  <footer class="site-footer" style="margin-top: 4rem;">
+    <div class="footer-bottom text-center">
+      <p>&copy; 2026 Hemal Shah · HK Engineering. Built for Semantic SEO.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true, theme: 'dark' });
+  </script>
+</body>
+</html>
